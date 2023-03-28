@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>gitlab 上和项目大仓库说再见</title>
+      <link href="/2023/03/27/gitlab-shang-he-xiang-mu-da-cang-ku-shuo-zai-jian/"/>
+      <url>/2023/03/27/gitlab-shang-he-xiang-mu-da-cang-ku-shuo-zai-jian/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p><code>git clone</code> 项目耗时很长。一种原因，网络受限。还有一种原因，项目仓库文件很大 n GB。那么，本篇文章就讲述如何给项目仓库减负。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> tools </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> tools </tag>
+            
+            <tag> gitlab </tag>
+            
+            <tag> BFG </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
