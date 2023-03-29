@@ -462,30 +462,24 @@
 </li>
 <li><p>执行命令 <code>java -jar bfg.jar --massive-non-file-objects-sized-up-to 100M --delete-files '{检察院业务及工作流程-01.asf,检察院业务及工作流程-02.asf}' thunisoft-mvd.git</code>。</p>
 <blockquote>
-<p><code>BFG</code> 对于需要清理的 history 会更改涉及文件的提交的 commit-id。具体老新 commit-id 的对应关系文件在 <code>thunisoft-mvd.git.bfg-report\2020-07-17\16-14-13\object-id-map.old-new.txt</code> 中</p>
+<p><code>BFG</code> 对于需要清理的 history 会更改涉及文件的提交的 commit-id。具体老新 commit-id 的对应关系文件在 <code>thunisoft-mvd.git.bfg-report\2020-07-17\16-14-13\object-id-map.old-new.txt</code> 中<br>此时，<code>.git/objects</code> 下的  <code>pack/xxxxx.pack</code>  文件会被解压为  n 个 <code>git objects</code> 对象文件</p>
 </blockquote>
-<p>此时，<code>.git/objects</code> 下的  <code>pack/xxxxx.pack</code>  文件会被解压为  n 个 <code>git objects</code> 对象文件</p>
 </li>
 </ul>
+<p>  <img src="/log_for_bfg.png"></p>
 </li>
-</ul>
-<pre><code>![](log_for_bfg.png)
-</code></pre>
-<ul>
 <li><p>执行命令 <code>git reflog expire --expire=now --all &amp;&amp; git gc --prune=now --aggressive</code> ，将 git object 对象压缩。而后，执行命令 <code>git push</code> 推送远端。</p>
 <blockquote>
 <p>注意：推送之前解除仓库的 <code>Protected Branches</code> 的配置</p>
 </blockquote>
 </li>
 </ul>
-<pre><code>![](git_compress.png)
-</code></pre>
+<p>  <img src="/git_compress.png"></p>
 <ul>
 <li>请项目组所有成员放弃原本的本地项目仓库，重新 clone git 项目。因为，如果用原来的仓库你会发现本地 <code>.git</code> 会更大，因为除了 <code>git gc</code> 重新生成的 <code>pack</code> 文件之外，还有本地本身老的 <code>pack</code> 文件。</li>
 </ul>
 <p><strong>最终和派生项目对比，除 <code>.git</code> 目录外其他相同。</strong></p>
-<pre><code>![](git_compress.png)
-</code></pre>
+<p><img src="/git_compress.png"></p>
 <p><strong>为什么存在不到 1 KB 的文件？因为，本项目使用 <code>git lfs</code> 做了大文件管理，使用 <code>git lfs pull</code> 可以从远端拉下 1 KB 映射的原文件</strong><br><strong><font color="red">清理完成，2.4 GB -&gt; 1.1 GB 的转身</font></strong></p>
 <h2 id="lion-特别说明"><a href="#lion-特别说明" class="headerlink" title=":lion: 特别说明"></a><span class="github-emoji"><span>🦁</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f981.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 特别说明</h2><ul>
 <li>项目使用 <code>git lfs</code> 管理大文件之后，使用 <code>BFG</code> 清理完对项目本身没有任何影响。照样，可以使用 <code>git lfs</code> 命令管理文件。</li>
