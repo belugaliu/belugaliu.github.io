@@ -26,15 +26,15 @@ tags:
 
 - windows 上使用 `TreeSize Free`  看看文件大小占比分布。发现，项目本身文件大小大约 900 MB ，`.git` 目录吃掉 2.6 GB。原因，其实上面基础知识算是解答了一部分，感兴趣的同学可以参考附件**git 原理**找答案。
 
-  ![](directory_image.png)
+  ![](images/2023/gitlab_bigcodes/directory_image.png)
 
 - 使用 `git verify-pack`  命令运行  `git verify-pack -v .git/objects/pack/pack-f0fa1a09cd9ebf8874e4ecafa9e56be7816097de.idx|sort -k 3 -n| tail -10` ，查找出文件大小在前 10 的文件 hash 标识。注意，windows 上请使用 `git Bash Here ` 运行。
 
-  ![](git_xpack.png)
+  ![](images/2023/gitlab_bigcodes/git_xpack.png)
 
 - 使用命令 `git rev-list` 运行 `git rev-list --objects --all|grep  hashId ` 定位大文件路径。此处，处理文件大小超过 100 MB。
 
-  ![](directory_file.png)
+  ![](images/2023/gitlab_bigcodes/directory_file.png)
 
 - 按照路径和 `git log` 查找提交人，确定文件是否存在，且是否需要存在。s确定需要清理的为 `业务/检察院/检察院业务基础知识/检察院业务及工作流程-01.asf` 和 `业务/检察院/检察院业务基础知识/检察院业务及工作流程-02.asf` 两个文件。已经删除的文件，却在日志里能搜索出来，原因是防止你执行 `git revert` 还原到删除前的 commitId 版本。所以，清理原则就是需要**明确**哪些文件要删除，没有机会还原的话，就删除吧。
 
@@ -56,21 +56,21 @@ tags:
       > `BFG` 对于需要清理的 history 会更改涉及文件的提交的 commit-id。具体老新 commit-id 的对应关系文件在 `thunisoft-mvd.git.bfg-report\2020-07-17\16-14-13\object-id-map.old-new.txt` 中 
       > 此时，`.git/objects` 下的  `pack/xxxxx.pack`  文件会被解压为  n 个 `git objects` 对象文件
 
-    ![](log_for_bfg.png)
+    ![](images/2023/gitlab_bigcodes/log_for_bfg.png)
 
 - 执行命令 `git reflog expire --expire=now --all && git gc --prune=now --aggressive` ，将 git object 对象压缩。而后，执行命令 `git push` 推送远端。
 
   > 注意：推送之前解除仓库的 `Protected Branches` 的配置
 
 
-  ![](git_compress.png)
+  ![](images/2023/gitlab_bigcodes/git_compress.png)
 
 
 - 请项目组所有成员放弃原本的本地项目仓库，重新 clone git 项目。因为，如果用原来的仓库你会发现本地 `.git` 会更大，因为除了 `git gc` 重新生成的 `pack` 文件之外，还有本地本身老的 `pack` 文件。
 
 **最终和派生项目对比，除 `.git` 目录外其他相同。**
 
-![](git_compress.png)
+![](images/2023/gitlab_bigcodes/gitcode_compare.png)
 
 **为什么存在不到 1 KB 的文件？因为，本项目使用 `git lfs` 做了大文件管理，使用 `git lfs pull` 可以从远端拉下 1 KB 映射的原文件**
 **<font color="red">清理完成，2.4 GB -> 1.1 GB 的转身</font>**
