@@ -6,7 +6,7 @@
   <link href="https://belugaliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://belugaliu.github.io/"/>
-  <updated>2023-03-27T05:22:31.540Z</updated>
+  <updated>2023-03-29T13:30:20.629Z</updated>
   <id>https://belugaliu.github.io/</id>
   
   <author>
@@ -18,17 +18,17 @@
   
   <entry>
     <title>gitlab 上和项目大仓库说再见</title>
-    <link href="https://belugaliu.github.io/2023/03/27/gitlab-shang-he-xiang-mu-da-cang-ku-shuo-zai-jian/"/>
-    <id>https://belugaliu.github.io/2023/03/27/gitlab-shang-he-xiang-mu-da-cang-ku-shuo-zai-jian/</id>
-    <published>2023-03-27T05:00:03.000Z</published>
-    <updated>2023-03-27T05:22:31.540Z</updated>
+    <link href="https://belugaliu.github.io/2023/03/27/bigcodedepots/"/>
+    <id>https://belugaliu.github.io/2023/03/27/bigcodedepots/</id>
+    <published>2023-03-27T13:00:03.000Z</published>
+    <updated>2023-03-29T13:30:20.629Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;一、背景&quot;&gt;&lt;a href=&quot;#一、背景&quot; class=&quot;headerlink&quot; title=&quot;一、背景&quot;&gt;&lt;/a&gt;一、背景&lt;/h2&gt;&lt;p&gt;&lt;code&gt;git clone&lt;/code&gt; 项目耗时很长。一种原因，网络受限。还有一种原因，项目仓库文件很大 n</summary>
+    <summary type="html">&lt;h2 id=&quot;cat-背景&quot;&gt;&lt;a href=&quot;#cat-背景&quot; class=&quot;headerlink&quot; title=&quot;:cat: 背景&quot;&gt;&lt;/a&gt;&lt;span class=&quot;github-emoji&quot;&gt;&lt;span&gt;🐱&lt;/span&gt;&lt;img</summary>
         
       
     
