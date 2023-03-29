@@ -53,10 +53,8 @@ tags:
 
     - 执行命令 `java -jar bfg.jar --massive-non-file-objects-sized-up-to 100M --delete-files '{检察院业务及工作流程-01.asf,检察院业务及工作流程-02.asf}' thunisoft-mvd.git`。
 
-      > `BFG` 对于需要清理的 history 会更改涉及文件的提交的 commit-id。具体老新 commit-id 的对应关系文件在 `thunisoft-mvd.git.bfg-report\2020-07-17\16-14-13\object-id-map.old-new.txt` 中
-      
-      此时，`.git/objects` 下的  `pack/xxxxx.pack`  文件会被解压为  n 个 `git objects` 对象文件
-
+      > `BFG` 对于需要清理的 history 会更改涉及文件的提交的 commit-id。具体老新 commit-id 的对应关系文件在 `thunisoft-mvd.git.bfg-report\2020-07-17\16-14-13\object-id-map.old-new.txt` 中 
+      > 此时，`.git/objects` 下的  `pack/xxxxx.pack`  文件会被解压为  n 个 `git objects` 对象文件
 
     ![](log_for_bfg.png)
 
@@ -65,14 +63,14 @@ tags:
   > 注意：推送之前解除仓库的 `Protected Branches` 的配置
 
 
-    ![](git_compress.png)
+  ![](git_compress.png)
 
 
 - 请项目组所有成员放弃原本的本地项目仓库，重新 clone git 项目。因为，如果用原来的仓库你会发现本地 `.git` 会更大，因为除了 `git gc` 重新生成的 `pack` 文件之外，还有本地本身老的 `pack` 文件。
 
 **最终和派生项目对比，除 `.git` 目录外其他相同。**
 
-    ![](git_compress.png)
+![](git_compress.png)
 
 **为什么存在不到 1 KB 的文件？因为，本项目使用 `git lfs` 做了大文件管理，使用 `git lfs pull` 可以从远端拉下 1 KB 映射的原文件**
 **<font color="red">清理完成，2.4 GB -> 1.1 GB 的转身</font>**
