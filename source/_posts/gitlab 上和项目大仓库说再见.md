@@ -36,7 +36,7 @@ tags:
 
   ![](images/2023/gitlab_bigcodes/directory_file.png)
 
-- 按照路径和 `git log` 查找提交人，确定文件是否存在，且是否需要存在。s确定需要清理的为 `业务/检察院/检察院业务基础知识/检察院业务及工作流程-01.asf` 和 `业务/检察院/检察院业务基础知识/检察院业务及工作流程-02.asf` 两个文件。已经删除的文件，却在日志里能搜索出来，原因是防止你执行 `git revert` 还原到删除前的 commitId 版本。所以，清理原则就是需要**明确**哪些文件要删除，没有机会还原的话，就删除吧。
+- 按照路径和 `git log` 查找提交人，确定文件是否存在，且是否需要存在。确定需要清理的为 `xxxx.asf` 和 `xxx.asf` 两个文件。已经删除的文件，却在日志里能搜索出来，原因是防止你执行 `git revert` 还原到删除前的 commitId 版本。所以，清理原则就是需要**明确**哪些文件要删除，没有机会还原的话，就删除吧。
 
   > :bulb: 有重命名/移动目录需求，请使用 `git mv`  命令，而达到目录变更及命名功能。不要使用 `git mv` 和 `git add` 的方式，完成文件重命名或移动目录。这样会造成有删除的用不到的记录。
 
@@ -51,7 +51,7 @@ tags:
 
     - 执行命令 `git clone --mirror git-repository-url`  clone git 仓库
 
-    - 执行命令 `java -jar bfg.jar --massive-non-file-objects-sized-up-to 100M --delete-files '{检察院业务及工作流程-01.asf,检察院业务及工作流程-02.asf}' thunisoft-mvd.git`。
+    - 执行命令 `java -jar bfg.jar --massive-non-file-objects-sized-up-to 100M --delete-files '{xxx.asf,xxx.asf}' thunisoft-mvd.git`。
 
       > `BFG` 对于需要清理的 history 会更改涉及文件的提交的 commit-id。具体老新 commit-id 的对应关系文件在 `thunisoft-mvd.git.bfg-report\2020-07-17\16-14-13\object-id-map.old-new.txt` 中 
       > 此时，`.git/objects` 下的  `pack/xxxxx.pack`  文件会被解压为  n 个 `git objects` 对象文件
