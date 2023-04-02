@@ -682,7 +682,7 @@
   dependencies:
     "function-bind" "^1.1.1"
 
-"hexo-cli@^4.0.0":
+"hexo-cli@^4.0.0", "hexo-cli@^4.3.0":
   "integrity" "sha512-lr46h1tK1RNQJAQZbzKYAWGsmqF5DLrW6xKEakqv/o9JqgdeempBjIm7HqjcZEUBpWij4EO65X6YJiDmT9LR7g=="
   "resolved" "https://registry.npmmirror.com/hexo-cli/-/hexo-cli-4.3.0.tgz"
   "version" "4.3.0"
