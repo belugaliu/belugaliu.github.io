@@ -9,7 +9,7 @@ tags:
 ---
 ## :cat: 背景
 
-前端项目 package.json 相当于后端 maven 项目 pom.xml 文件管理项目组件依赖。需要走 `npm install --save-dev xxxx` 引入方式。
+前端项目 `package.json` 相当于后端 maven 项目 pom.xml 文件管理项目组件依赖。需要走 `npm install --save-dev xxxx` 引入方式。
 对于项目中存在多项目共用的前端组件开发，不希望每次修改以发布版本再 `npm install` 下载包调试。
 可以选用 [npm-link 方式](https://docs.npmjs.com/cli/v9/commands/npm-link/) 将前端组件 link 到场景 UI 中完成开发/联调/bug 修改工作。
 最近前端同学发现，npm-link 方式引入的前端组件中引入 VUEX，且对 store 属性 watch 事件是不会生效。
