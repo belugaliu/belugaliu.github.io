@@ -3,7 +3,7 @@ title: spring-boot-security OAuth2应用实现
 date: 2023-04-11 00:08:54
 categories:
 - spring-security
-  tags:
+tags:
 - spring-security
 - cas
 - oauth2
