@@ -115,7 +115,7 @@ public Authentication attemptAuthentication(HttpServletRequest request,
 	}
 ```
 
-:high_brightness: <font color='yellow'>**在令牌未被验证之前，令牌的初始化必须指定令牌并未完成验证。即 authenticated 属性为 false 。**</font>
+:high_brightness: <font color='blue'>**在令牌未被验证之前，令牌的初始化必须指定令牌并未完成验证。即 authenticated 属性为 false 。**</font>
 
 :jack_o_lantern: 如果是其他验证方式，则需要自己组装校验令牌，继承 `AbstractAuthenticationToken` 类。
 
@@ -123,7 +123,7 @@ public Authentication attemptAuthentication(HttpServletRequest request,
 
 如果是使用 CAS 验证，需要选择一下 `AbstractCasProtocolUrlBasedTicketValidator` 验证器。当然你也可以实现此 abstract 类，完成 ticket 验证。验证器的调用方是 `CasAuthenticationProvider`。为什么在此介绍 `CasAuthenticationProvider` ？:jack_o_lantern: 因为基本上所有的验证都一定是实现 `AuthenticationProvider` 接口。:jack_o_lantern: 用户权限信息的组装，是实现 `AuthenticationUserDetailsService<T extends Authentication>` 接口，从缓存或是数据库中查询用户或权限点信息组装 UserDetails。
 
-:high_brightness: <font color='yellow'>**验证通过后，可以通过在 Controller 方法上使用 `@AuthenticationPrincipal` 注解，或请求线程里 `SecurityContextHolder.getContext().getAuthentication()`来获取用户授权信息。`@AuthenticationPrincipal` 注解对应 UserDetails 对象，`@CurrentSecurityContext` 注解对应 SecurityContext 对象。**</font>
+:high_brightness: <font color='blue'>**验证通过后，可以通过在 Controller 方法上使用 `@AuthenticationPrincipal` 注解，或请求线程里 `SecurityContextHolder.getContext().getAuthentication()`来获取用户授权信息。`@AuthenticationPrincipal` 注解对应 UserDetails 对象，`@CurrentSecurityContext` 注解对应 SecurityContext 对象。**</font>
 
 #### PART5. 验证成功或失败的处理实现
 
@@ -321,5 +321,5 @@ public class LoginConfiguration extends WebSecurityConfigurerAdapter {
 }
 ```
 
-:high_brightness: <font color='yellow'>**需要明确 Filter 的先后顺序，顺序不对可能会造成验证 bug，比如 renewFilter 应该在 BearerTokenAuthenticationFilter 之前。否则 renewFilter 就没有意义了。**</font>
+:high_brightness: <font color='blue'>**需要明确 Filter 的先后顺序，顺序不对可能会造成验证 bug，比如 renewFilter 应该在 BearerTokenAuthenticationFilter 之前。否则 renewFilter 就没有意义了。**</font>
 
