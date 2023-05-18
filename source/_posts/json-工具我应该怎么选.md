@@ -10,9 +10,8 @@ tags:
 ### json-lib
 
 这是我**被迫**使用的 JSON 工具包。不是主动选择，也是因为确实觉得很坑。**首先**，序列化和反序列化耗时很慢。**其次**，`JSONObject.getXXX(key)` JSONObject
-的 get 系方法都必须要求 key 必须在 JSON 串中且非空。也就是被使用的 key 都必须是非空值，所以就逼迫设置默认值。但这样可能会导致业务被"逼不得已"的默认值覆盖。**第三**，
-`JSONObject.put(key,value)` 方法会针对 value 类型为 String 且符合 JSON 格式时，会将 value 反序列化。这个特性看似很好，其实在特定场景下，给人误导，
-以为 value 是 JSONObject 结果发现是 String。Oh my god ！！总结，坑比较多，不建议使用。
+的 get 系方法都必须要求 key 必须在 JSON 串中且非空。也就是被使用的 key 都必须是非空值，所以就逼迫设置默认值。但这样可能会导致业务被"逼不得已"的默认值覆盖。**第三**，`JSONObject.put(key,value)` 方法会针对 value[ 类型为 String 且符合 JSON 格式时，会将 value 反序列化。这个特性看似很好，其实在特定场景下，给人误导，
+以为 value 是 JSONObject 结果发现是 String。Oh my god ！！总结，坑比较多，不建议使用。]()
 
 ### fastjson
 
@@ -29,5 +28,5 @@ tags:
 google 推出 JSON 工具包，符合 JSON 格式定义，是依据属性进行序列化和反序列化，包含 public、private、protected 修饰字段。转 List、Set 集合类，相比 fastjson 支持
 的很好。但是性能相比而言会弱一些。
 
-总结，如果需要功能完善，易上手建议 fastjson/gson。jackson 就结合 spring-web 使用。
+### **如果需要功能完善，易上手建议 fastjson/gson。jackson 就结合 spring-web 使用。**
 
