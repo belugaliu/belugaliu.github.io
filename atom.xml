@@ -6,7 +6,7 @@
   <link href="https://belugaliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://belugaliu.github.io/"/>
-  <updated>2023-04-21T18:23:47.973Z</updated>
+  <updated>2023-05-18T17:27:01.354Z</updated>
   <id>https://belugaliu.github.io/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>json 工具我应该怎么选？</title>
+    <link href="https://belugaliu.github.io/2023/05/18/json-gong-ju-wo-ying-gai-zen-me-xuan/"/>
+    <id>https://belugaliu.github.io/2023/05/18/json-gong-ju-wo-ying-gai-zen-me-xuan/</id>
+    <published>2023-05-18T23:25:00.000Z</published>
+    <updated>2023-05-18T17:27:01.354Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;编程多年，其实适合项目/自己/团队才是合适的。JSON 在 B/S 应用下，作为轻量级的数据交换方式。也应运而生不少序列化反序列化的 JSON 工具包。&lt;br&gt;比如，json-lib、fastjson、gson、jackson</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>spring-boot-security OAuth2应用实现</title>
     <link href="https://belugaliu.github.io/2023/04/11/spring-boot-security-oauth2-ying-yong-shi-xian/"/>
     <id>https://belugaliu.github.io/2023/04/11/spring-boot-security-oauth2-ying-yong-shi-xian/</id>
     <published>2023-04-11T00:08:54.000Z</published>
-    <updated>2023-04-21T18:23:47.973Z</updated>
+    <updated>2023-05-18T17:27:01.354Z</updated>
     
     
       
@@ -52,7 +73,7 @@
     <link href="https://belugaliu.github.io/2023/04/10/spring-security-zhong-yu-jian-de-hao-shi-xiao-keng/"/>
     <id>https://belugaliu.github.io/2023/04/10/spring-security-zhong-yu-jian-de-hao-shi-xiao-keng/</id>
     <published>2023-04-10T22:01:52.000Z</published>
-    <updated>2023-04-21T18:23:47.973Z</updated>
+    <updated>2023-05-18T17:27:01.354Z</updated>
     
     
       
@@ -81,7 +102,7 @@
     <link href="https://belugaliu.github.io/2023/04/02/npm-link-vuex-watch-zen-me-bu-sheng-xiao/"/>
     <id>https://belugaliu.github.io/2023/04/02/npm-link-vuex-watch-zen-me-bu-sheng-xiao/</id>
     <published>2023-04-02T19:07:36.000Z</published>
-    <updated>2023-04-21T18:23:47.973Z</updated>
+    <updated>2023-05-18T17:27:01.354Z</updated>
     
     
       

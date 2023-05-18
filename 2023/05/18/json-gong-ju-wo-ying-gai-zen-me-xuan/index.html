@@ -4,9 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="gitlab 上和项目大仓库说再见, beluga">
-    <meta name="description" content="🐱 背景git clone 项目耗时很长。原因，网速慢或是代码仓库文件很大(n+ G)。本篇文章就讲述如何给 gitlab 代码仓库减负。
-🐶 基础知识项目在 gitlab 中显示的仓库大小 = 项目文件总大小 + .git （隐藏）目">
+    <meta name="keywords" content="json 工具我应该怎么选？, beluga">
+    <meta name="description" content="编程多年，其实适合项目/自己/团队才是合适的。JSON 在 B/S 应用下，作为轻量级的数据交换方式。也应运而生不少序列化反序列化的 JSON 工具包。比如，json-lib、fastjson、gson、jackson 等。我用过的，主要是">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>gitlab 上和项目大仓库说再见 | beluga</title>
+    <title>json 工具我应该怎么选？ | beluga</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -336,12 +335,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">gitlab 上和项目大仓库说再见</h1>
+                    <h1 class="description center-align post-title">json 工具我应该怎么选？</h1>
                 </div>
             </div>
         </div>
@@ -363,33 +362,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/tools/">
-                                <span class="chip bg-color">tools</span>
-                            </a>
-                        
-                            <a href="/tags/gitlab/">
-                                <span class="chip bg-color">gitlab</span>
-                            </a>
-                        
-                            <a href="/tags/BFG/">
-                                <span class="chip bg-color">BFG</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/tools/" class="post-category">
-                                tools
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -398,7 +376,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-03-27
+                    2023-05-18
                 </div>
                 
 
@@ -407,14 +385,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    550
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    2 分
                 </div>
                 
 
@@ -437,73 +415,12 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="cat-背景"><a href="#cat-背景" class="headerlink" title=":cat: 背景"></a><span class="github-emoji"><span>🐱</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f431.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 背景</h2><p><code>git clone</code> 项目耗时很长。原因，网速慢或是代码仓库文件很大(n+ G)。本篇文章就讲述如何给 <code>gitlab</code> 代码仓库减负。</p>
-<h3 id="dog-基础知识"><a href="#dog-基础知识" class="headerlink" title=":dog: 基础知识"></a><span class="github-emoji"><span>🐶</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f436.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 基础知识</h3><p>项目在 gitlab 中显示的仓库大小 = 项目文件总大小 + <code>.git</code> （隐藏）目录下文件大小。请认真关注你项目目录文件大小（windows 可以用 <a target="_blank" rel="noopener" href="https://www.jam-software.com/treesize_free">treesize free</a> / <a target="_blank" rel="noopener" href="http://www.uderzo.it/main_products/space_sniffer/download_alt.html">SpaceSniffer</a> 工具，linux 可以用命令 <code>du -h –max-depth=1 *</code>，mac 命令 <code>du -h -d 1 *</code> ），一般 <code>.git</code> 目录下文件大小 &gt;= 项目文件大小。意味着，项目整体下载空间占用 &gt;= 2 * 项目文件大小。所以，如果项目中包含比较大的文件，例如视频，高清照片等，把 gitlab 当做了<strong>共享备份存储空间</strong>是项目文件大的罪魁祸手。所以，项目初期代码一定和需求文档做剥离，除非你的项目足够的小。</p>
-<h3 id="fish-拯救-git-仓库"><a href="#fish-拯救-git-仓库" class="headerlink" title=":fish: 拯救 git 仓库"></a><span class="github-emoji"><span>🐟</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f41f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 拯救 git 仓库</h3><p>对于需求文档类项目而言，建议用 <code>git lfs</code> 做大文件管理（此处 <code>git lfs</code> 不做过多介绍，请点击<a target="_blank" rel="noopener" href="https://git-lfs.github.com/">链接</a>了解）。请多想想后面加入的需求人，给他们的加入减少一些绊脚石。</p>
-<blockquote>
-<p><span class="github-emoji"><span>💡</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a1.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 仅使用几次，过一个月之后基本不翻的东西、无需版本管理、内容超过 100 MB 的视频，请慎重放入 git 仓库</p>
-</blockquote>
-<h3 id="whale-分析-git-大仓库"><a href="#whale-分析-git-大仓库" class="headerlink" title=":whale: 分析 git 大仓库"></a><span class="github-emoji"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 分析 git 大仓库</h3><ul>
-<li><p>windows 上使用 <code>TreeSize Free</code>  看看文件大小占比分布。发现，项目本身文件大小大约 900 MB ，<code>.git</code> 目录吃掉 2.6 GB。原因，其实上面基础知识算是解答了一部分，感兴趣的同学可以参考附件<strong>git 原理</strong>找答案。</p>
-<p><img src="/images/2023/gitlab_bigcodes/directory_image.png"></p>
-</li>
-<li><p>使用 <code>git verify-pack</code>  命令运行  <code>git verify-pack -v .git/objects/pack/pack-f0fa1a09cd9ebf8874e4ecafa9e56be7816097de.idx|sort -k 3 -n| tail -10</code> ，查找出文件大小在前 10 的文件 hash 标识。注意，windows 上请使用 <code>git Bash Here </code> 运行。</p>
-<p><img src="/images/2023/gitlab_bigcodes/git_xpack.png"></p>
-</li>
-<li><p>使用命令 <code>git rev-list</code> 运行 <code>git rev-list --objects --all|grep  hashId </code> 定位大文件路径。此处，处理文件大小超过 100 MB。</p>
-<p><img src="/images/2023/gitlab_bigcodes/directory_file.png"></p>
-</li>
-<li><p>按照路径和 <code>git log</code> 查找提交人，确定文件是否存在，且是否需要存在。确定需要清理的为 <code>xxxx.asf</code> 和 <code>xxx.asf</code> 两个文件。已经删除的文件，却在日志里能搜索出来，原因是防止你执行 <code>git revert</code> 还原到删除前的 commitId 版本。所以，清理原则就是需要<strong>明确</strong>哪些文件要删除，没有机会还原的话，就删除吧。</p>
-<blockquote>
-<p><span class="github-emoji"><span>💡</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a1.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 有重命名/移动目录需求，请使用 <code>git mv</code>  命令，而达到目录变更及命名功能。不要使用 <code>git mv</code> 和 <code>git add</code> 的方式，完成文件重命名或移动目录。这样会造成有删除的用不到的记录。</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="dolphin-如何清理"><a href="#dolphin-如何清理" class="headerlink" title=":dolphin: 如何清理"></a><span class="github-emoji"><span>🐬</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f42c.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 如何清理</h2><blockquote>
-<p>在清理之前，建议所有人的分支都 push 到远端。否则，其他人的每次的 push 都会让你的清理都需要重新来一次。</p>
-</blockquote>
-<p>目前，主要有两种方法：</p>
-<ul>
-<li><p>git 原生支持的 <code>filter-branch</code> 分支文件，命令 <code>git filter-branch --force --tree-filter 'rm -f path/to/big_file.mpg' HEAD</code> 。（不推荐。对于超多 commit 的项目，<code>filter-branch</code> 慢的怀疑人生，小编就是从 <code>git filter-branch</code> 放弃，转投 <code>BFG</code>）</p>
-</li>
-<li><p><code>BFG</code> 工具</p>
-<ul>
-<li><p>执行命令 <code>git clone --mirror git-repository-url</code>  clone git 仓库</p>
-</li>
-<li><p>执行命令 <code>java -jar bfg.jar --massive-non-file-objects-sized-up-to 100M --delete-files '{xxx.asf,xxx.asf}' thunisoft-mvd.git</code>。</p>
-<blockquote>
-<p><code>BFG</code> 对于需要清理的 history 会更改涉及文件的提交的 commit-id。具体老新 commit-id 的对应关系文件在 <code>thunisoft-mvd.git.bfg-report\2020-07-17\16-14-13\object-id-map.old-new.txt</code> 中<br>此时，<code>.git/objects</code> 下的  <code>pack/xxxxx.pack</code>  文件会被解压为  n 个 <code>git objects</code> 对象文件</p>
-</blockquote>
-</li>
-</ul>
-<p>  <img src="/images/2023/gitlab_bigcodes/log_for_bfg.png"></p>
-</li>
-<li><p>执行命令 <code>git reflog expire --expire=now --all &amp;&amp; git gc --prune=now --aggressive</code> ，将 git object 对象压缩。而后，执行命令 <code>git push</code> 推送远端。</p>
-<blockquote>
-<p>注意：推送之前解除仓库的 <code>Protected Branches</code> 的配置</p>
-</blockquote>
-</li>
-</ul>
-<p>  <img src="/images/2023/gitlab_bigcodes/git_compress.png"></p>
-<ul>
-<li>请项目组所有成员放弃原本的本地项目仓库，重新 clone git 项目。因为，如果用原来的仓库你会发现本地 <code>.git</code> 会更大，因为除了 <code>git gc</code> 重新生成的 <code>pack</code> 文件之外，还有本地本身老的 <code>pack</code> 文件。</li>
-</ul>
-<p><strong>最终和派生项目对比，除 <code>.git</code> 目录外其他相同。</strong></p>
-<p><img src="/images/2023/gitlab_bigcodes/gitcode_compare.png"></p>
-<p><strong>为什么存在不到 1 KB 的文件？因为，本项目使用 <code>git lfs</code> 做了大文件管理，使用 <code>git lfs pull</code> 可以从远端拉下 1 KB 映射的原文件</strong><br><strong><font color="red">清理完成，2.4 GB -&gt; 1.1 GB 的转身</font></strong></p>
-<h2 id="lion-特别说明"><a href="#lion-特别说明" class="headerlink" title=":lion: 特别说明"></a><span class="github-emoji"><span>🦁</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f981.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 特别说明</h2><ul>
-<li>项目使用 <code>git lfs</code> 管理大文件之后，使用 <code>BFG</code> 清理完对项目本身没有任何影响。照样，可以使用 <code>git lfs</code> 命令管理文件。</li>
-<li>真实项目在清理前，请先按照本文先 <code>clone</code> 出一份，熟悉一下清理流程，更有底气。</li>
-</ul>
-<h2 id="horse-附录"><a href="#horse-附录" class="headerlink" title=":horse: 附录"></a><span class="github-emoji"><span>🐴</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f434.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 附录</h2><ul>
-<li><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2018/10/git-internals.html">git 原理-阮一峰</a></li>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/45510461">git 原理</a></li>
-<li><a target="_blank" rel="noopener" href="https://docs.github.com/cn/github/managing-large-files/removing-files-from-git-large-file-storage#removing-a-single-file">git 大文件清理-github</a></li>
-<li><a target="_blank" rel="noopener" href="http://gitlab.thunisoft.com/help/user/project/repository/reducing_the_repo_size_using_git.md">git 大文件清理-gitlab</a>，目前不用上传 <code>object-id-map.old-new.txt</code> 文件，走 “开始清理” 这步骤</li>
-<li><a target="_blank" rel="noopener" href="https://rtyley.github.io/bfg-repo-cleaner/">git BFG</a></li>
-<li><a target="_blank" rel="noopener" href="https://learngitbranching.js.org/?locale=zh_CN">git 练习场</a></li>
-<li><a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2">git 学习文档</a></li>
-</ul>
+                <p>编程多年，其实适合项目/自己/团队才是合适的。JSON 在 B/S 应用下，作为轻量级的数据交换方式。也应运而生不少序列化反序列化的 JSON 工具包。<br>比如，json-lib、fastjson、gson、jackson 等。我用过的，主要是这几个就说说我的选择场景及依据。</p>
+<h3 id="json-lib"><a href="#json-lib" class="headerlink" title="json-lib"></a>json-lib</h3><p>这是我<strong>被迫</strong>使用的 JSON 工具包。不是主动选择，也是因为确实觉得很坑。<strong>首先</strong>，序列化和反序列化耗时很慢。<strong>其次</strong>，<code>JSONObject.getXXX(key)</code> JSONObject<br>的 get 系方法都必须要求 key 必须在 JSON 串中且非空。也就是被使用的 key 都必须是非空值，所以就逼迫设置默认值。但这样可能会导致业务被”逼不得已”的默认值覆盖。<strong>第三</strong>，<br><code>JSONObject.put(key,value)</code> 方法会针对 value 类型为 String 且符合 JSON 格式时，会将 value 反序列化。这个特性看似很好，其实在特定场景下，给人误导，<br>以为 value 是 JSONObject 结果发现是 String。Oh my god ！！总结，坑比较多，不建议使用。</p>
+<h3 id="fastjson"><a href="#fastjson" class="headerlink" title="fastjson"></a>fastjson</h3><p>阿里巴巴出品，使用是很简单，基于类属性 get/set 来序列化和非序列化。包括也支持很多选项 <code>FastJsonConfig</code> 、 <code>SerializerFeature</code>。对研发来说，序列化反序列化使用<br>起来也很简单，性能也偏好。以为应该是很受欢迎，但 github 上 issue 很多。传说中源码写的不好，也没什么注释。所以，不是最受欢迎，在中国很有地位。</p>
+<h3 id="jackson"><a href="#jackson" class="headerlink" title="jackson"></a>jackson</h3><p>被 spring-web 用作默认的 <code>application/json</code> 序列化和反序列化 JSON 选型。依赖的 jar 包少，提供扩展选项/高级功能很多。对我而言，相比较 fastjson 而言，使用<br>不方便。对于 String 转 Date 时，必须指定 <code>@JsonProperty(format='xxxx')</code> 格式化字段。</p>
+<h3 id="gson"><a href="#gson" class="headerlink" title="gson"></a>gson</h3><p>google 推出 JSON 工具包，符合 JSON 格式定义，是依据属性进行序列化和反序列化，包含 public、private、protected 修饰字段。转 List、Set 集合类，相比 fastjson 支持<br>的很好。但是性能相比而言会弱一些。</p>
+<p>总结，如果需要功能完善，易上手建议 fastjson/gson。jackson 就结合 spring-web 使用。</p>
 
                 
             </div>
@@ -530,7 +447,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://belugaliu.github.io/2023/03/27/gitlab-shang-he-xiang-mu-da-cang-ku-shuo-zai-jian/">https://belugaliu.github.io/2023/03/27/gitlab-shang-he-xiang-mu-da-cang-ku-shuo-zai-jian/</a>
+                    <a href="https://belugaliu.github.io/2023/05/18/json-gong-ju-wo-ying-gai-zen-me-xuan/">https://belugaliu.github.io/2023/05/18/json-gong-ju-wo-ying-gai-zen-me-xuan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -567,19 +484,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/tools/">
-                                    <span class="chip bg-color">tools</span>
-                                </a>
-                            
-                                <a href="/tags/gitlab/">
-                                    <span class="chip bg-color">gitlab</span>
-                                </a>
-                            
-                                <a href="/tags/BFG/">
-                                    <span class="chip bg-color">BFG</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -623,70 +528,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/04/02/npm-link-vuex-watch-zen-me-bu-sheng-xiao/">
+                <a href="/2023/05/18/json-gong-ju-wo-ying-gai-zen-me-xuan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="npm-link VUEX watch 怎么不生效">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="json 工具我应该怎么选？">
                         
-                        <span class="card-title">npm-link VUEX watch 怎么不生效</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-02
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/npm/" class="post-category">
-                                    npm
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/tools/">
-                        <span class="chip bg-color">tools</span>
-                    </a>
-                    
-                    <a href="/tags/npm-link/">
-                        <span class="chip bg-color">npm-link</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/03/27/gitlab-shang-he-xiang-mu-da-cang-ku-shuo-zai-jian/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="gitlab 上和项目大仓库说再见">
-                        
-                        <span class="card-title">gitlab 上和项目大仓库说再见</span>
+                        <span class="card-title">json 工具我应该怎么选？</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -697,34 +550,75 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-18
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/tools/" class="post-category">
-                                    tools
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            beluga
                             
                         </span>
                     </div>
                 </div>
 
                 
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/04/11/spring-boot-security-oauth2-ying-yong-shi-xian/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="spring-boot-security OAuth2应用实现">
+                        
+                        <span class="card-title">spring-boot-security OAuth2应用实现</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/spring-security/" class="post-category">
+                                    spring-security
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/tools/">
-                        <span class="chip bg-color">tools</span>
+                    <a href="/tags/spring-security/">
+                        <span class="chip bg-color">spring-security</span>
                     </a>
                     
-                    <a href="/tags/gitlab/">
-                        <span class="chip bg-color">gitlab</span>
+                    <a href="/tags/cas/">
+                        <span class="chip bg-color">cas</span>
                     </a>
                     
-                    <a href="/tags/BFG/">
-                        <span class="chip bg-color">BFG</span>
+                    <a href="/tags/oauth2/">
+                        <span class="chip bg-color">oauth2</span>
+                    </a>
+                    
+                    <a href="/tags/pre-security/">
+                        <span class="chip bg-color">pre-security</span>
                     </a>
                     
                 </div>
