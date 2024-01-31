@@ -6,7 +6,7 @@
   <link href="https://belugaliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://belugaliu.github.io/"/>
-  <updated>2023-05-18T17:31:28.458Z</updated>
+  <updated>2024-01-31T13:42:38.056Z</updated>
   <id>https://belugaliu.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis 分布式锁你续约了吗</title>
+    <link href="https://belugaliu.github.io/2024/01/31/redis-fen-bu-shi-suo-ni-xu-yue-liao-ma/"/>
+    <id>https://belugaliu.github.io/2024/01/31/redis-fen-bu-shi-suo-ni-xu-yue-liao-ma/</id>
+    <published>2024-01-31T13:38:27.000Z</published>
+    <updated>2024-01-31T13:42:38.056Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;服务在集群情况下，线程锁是无法满足服务之间逻辑隔离。分布式锁概念应运而生，它需要具备互斥性、防止死锁、高可用性、可重入性、唯一标识的特点。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;互斥性：任意时刻，只能有一个服务才能获取锁。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;防止死锁：分布式锁应该</summary>
+        
+      
+    
+    
+    
+    <category term="分布式锁" scheme="https://belugaliu.github.io/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/"/>
+    
+    
+    <category term="分布式锁" scheme="https://belugaliu.github.io/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/"/>
+    
+    <category term="redis" scheme="https://belugaliu.github.io/tags/redis/"/>
+    
+  </entry>
   
   <entry>
     <title>json 工具我应该怎么选？</title>
