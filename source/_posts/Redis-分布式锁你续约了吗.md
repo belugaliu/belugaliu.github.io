@@ -7,6 +7,8 @@ tags:
 - 分布式锁
 - redis
 ---
+## Redis 分布式锁你续期了吗？
+
 服务在集群情况下，线程锁是无法满足服务之间逻辑隔离。分布式锁概念应运而生，它需要具备互斥性、防止死锁、高可用性、可重入性、唯一标识的特点。
 
 - 互斥性：任意时刻，只能有一个服务才能获取锁。
@@ -19,9 +21,14 @@ tags:
 
 - 唯一标识：分布式锁应该具备唯一的标识。
 
+
 分布式锁方案大体有几种，使用基于唯一索引的数据库表、zookeeper/etcd、redis。为达到分布式锁的互斥性和防止死锁这两个特性，方案是设定超时时间配合**定时续期**以达到目的。如果你用 Redis 实现分布式锁，请问你项目中 Redis 分布式锁有**定时续期**吗？
 
-Jedis 主要包含数据结构操作和队列 PUB/SUB 操作。Redisson 组件除此之外还包含分布式锁的实现。Redisson 关于获取锁有六种方式，`lock()` 、`tryLock()`、`lockInterruptibly()` 、`tryLock(long waitTime, TimeUnit unit)`、 `lock(long leaseTime, TimeUnit unit)` 、`tryLock(long waitTime, long leaseTime, TimeUnit unit)`。区分点在于 是否等待获取锁、等待获取锁时长，是否有过期、过期时间。好像没有看到续期相关的内容。就像老夫老妻一样，:heart: 爱是藏在细节里，续期藏在锁获取的细节里。
+Jedis 主要包含数据结构操作和队列 PUB/SUB 操作。Redisson 组件除此之外还包含分布式锁的实现。Redisson 关于获取锁有六种方式，`lock()` 、`tryLock()`、`lockInterruptibly()` 、`tryLock(long waitTime, TimeUnit unit)`、 `lock(long leaseTime, TimeUnit unit)` 、`tryLock(long waitTime, long leaseTime, TimeUnit unit)`。区分点在于 是否等待获取锁、等待获取锁时长，是否有过期、过期时间。好像没有看到续期相关的内容。
+
+#### :mag: 续期藏在细节里
+
+就像老夫老妻一样，:heart: 爱是藏在细节里，续期藏在锁获取的细节里。
 
 > :vertical_traffic_light: 代码是以 redisson-3.18.0 版本为例，估计总体思路差不多。
 
@@ -110,6 +117,10 @@ private void renewExpiration() {
 **简单概括，就是未设置过期时间的分布式锁，是以 30s 过期时间先获取分布式锁，程序中使用时间片方式在每 10s (30s * 1/3) 续期。设置过期时间的分布式锁反而不能享受续期。**
 
 :sweat_smile: 本来大家在实战过程中，就是怕锁不释放，基本上都会被建议使用 `tryLock(long waitTime, long leaseTime, TimeUnit unit)` ，结果只有这种设置 leaseTime 的获取锁没有续期。多少有点被背 (feng) 刺 (ci) :bee:。我们需要解决这个问（feng）题（ci），希望在 leaseTime 设置时，也能享受续期功效。
+
+#### :balance_scale: 超时与续期兼得
+
+好在 `RedissonBaseLock` 中关于续期的方法 `scheduleExpirationRenewal` 和 `cancelExpirationRenewal` 都是 `protected` 修饰符修饰。可以建立 `RedissonBaseLock` 的包装类，在获取锁和释放锁的时候对 leaseTime 设置的续期补足即可。
 
 ```java
 package org.redisson;
@@ -388,7 +399,6 @@ public class RenewalLock implements RLock {
     }
 
 }
-
 ```
 
 有三个注意点：首先，这个装饰类需要放在 `org.redisson` 只有这样才能使用 `proteced void scheduleExpirationRenewal()` 和 `protected void cancelExpirationRenewal()` 方法。其次，续期依旧是按照 `internalLockLeaseTime` /3 间隔触发，但因为是申请锁完结之后的续期，所以此时的 `internalLockLeaseTime` 为第一次申请锁的 `leaseTime` 。第三，因 Redisson 版本不一样，可能不会有 RedissonBaseLock 基类，你可以升级版本后使用装饰类。
