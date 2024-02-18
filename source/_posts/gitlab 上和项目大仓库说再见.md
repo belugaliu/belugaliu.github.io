@@ -2,8 +2,9 @@
 title: gitlab 上和项目大仓库说再见
 date: 2023-03-27 13:00:03
 categories:
-- tools
+- 杂项
 tags:
+- 杂项
 - tools
 - gitlab
 - BFG

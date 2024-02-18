@@ -2,9 +2,11 @@
 title: npm-link VUEX watch 怎么不生效
 date: 2023-04-02 19:07:36
 categories:
-- npm 
+- code
 tags:
-- tools
+- code
+- npm
+- 前端
 - npm-link
 ---
 ## :cat: 背景
