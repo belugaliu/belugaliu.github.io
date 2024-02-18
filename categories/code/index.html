@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类, beluga">
+    <meta name="keywords" content="分类: code, beluga">
     <meta name="description" content="海洋的尽头是草原">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类 | beluga</title>
+    <title>分类: code | beluga</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -395,7 +395,7 @@
                 
                 <a href="/categories/code/" title="code: 5">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
+                             chip-active "
                             style="background-color: #F9EBEA;">code
                         <span class="tag-length">5</span>
                     </span>
@@ -427,65 +427,309 @@
 
 
     
-    <style type="text/css">
-    #category-radar {
-        width: 100%;
-        height: 360px;
-    }
-</style>
 
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="category-radar" class="card-content"></div>
-    </div>
-</div>
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2024/02/18/zen-me-shi-xian-mybatis-zi-dong-she-zhi-chuang-jian-shi-jian-geng-xin-shi-jian/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="怎么实现 mybatis 自动设置创建时间更新时间">
+                            
+                            <span class="card-title">怎么实现 mybatis 自动设置创建时间更新时间</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                怎么实现 mybatis 自动设置创建时间更新时间🔍 相对流行方案弊端mybatis 提供 Interceptor 接口以插件方式提供扩展能力。互联网上大都是对数据表映射类对象中关于时间属性设置当前时间的解决方案。但这种方法无法解决 ma
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-18
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/code/" class="post-category">
+                                    code
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let radarChart = echarts.init(document.getElementById('category-radar'));
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/code/">
+                            <span class="chip bg-color">code</span>
+                        </a>
+                        
+                        <a href="/tags/mybatis/">
+                            <span class="chip bg-color">mybatis</span>
+                        </a>
+                        
+                        <a href="/tags/mybatis-plus/">
+                            <span class="chip bg-color">mybatis-plus</span>
+                        </a>
+                        
+                        <a href="/tags/%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85/">
+                            <span class="chip bg-color">自动填充</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2024/01/31/redis-fen-bu-shi-suo-ni-xu-yue-liao-ma/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Redis 分布式锁你续约了吗">
+                            
+                            <span class="card-title">Redis 分布式锁你续约了吗</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Redis 分布式锁你续期了吗？服务在集群情况下，线程锁是无法满足服务之间逻辑隔离。分布式锁概念应运而生，它需要具备互斥性、防止死锁、高可用性、可重入性、唯一标识的特点。
 
-    
+互斥性：任意时刻，只能有一个服务才能获取锁。
 
-    let option = {
-        title: {
-            left: 'center',
-            text: '文章分类雷达图',
-            textStyle: {
-                fontWeight: 500,
-                fontSize: 22
-            }
-        },
-        tooltip: {},
-        radar: {
-            name: {
-                textStyle: {
-                    color: '#3C4858'
-                }
-            },
-            indicator: [{"name":"code","max":6},{"name":"杂项","max":6},{"name":"选型","max":6}],
-            nameGap: 5,
-            center: ['50%','55%'],
-            radius: '66%'
-        },
-        series: [{
-            type: 'radar',
-            color: ['#3ecf8e'],
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data : [
-                {
-                    value : [5,1,1],
-                    name : '文章分类数量'
-                }
-            ]
-        }]
-    };
+防止死锁：分布式锁
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-31
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/code/" class="post-category">
+                                    code
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
-    radarChart.setOption(option);
-</script>
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">
+                            <span class="chip bg-color">分布式锁</span>
+                        </a>
+                        
+                        <a href="/tags/redis/">
+                            <span class="chip bg-color">redis</span>
+                        </a>
+                        
+                        <a href="/tags/code/">
+                            <span class="chip bg-color">code</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/04/11/spring-boot-security-oauth2-ying-yong-shi-xian/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="spring-boot-security OAuth2应用实现">
+                            
+                            <span class="card-title">spring-boot-security OAuth2应用实现</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                🐭 背景项目上一直使用 CAS + 应用 session + nginx IP hash 组合方式实现伪集群部署。但这种方式也有一定的缺点，请求不够平均，应用使用异步处理方式，还必须将结果返回给发起的应用，否则前端无法拿到结果。这些都是 
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-11
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/code/" class="post-category">
+                                    code
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
-    
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/spring-security/">
+                            <span class="chip bg-color">spring-security</span>
+                        </a>
+                        
+                        <a href="/tags/cas/">
+                            <span class="chip bg-color">cas</span>
+                        </a>
+                        
+                        <a href="/tags/oauth2/">
+                            <span class="chip bg-color">oauth2</span>
+                        </a>
+                        
+                        <a href="/tags/pre-security/">
+                            <span class="chip bg-color">pre-security</span>
+                        </a>
+                        
+                        <a href="/tags/code/">
+                            <span class="chip bg-color">code</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/04/10/spring-security-zhong-yu-jian-de-hao-shi-xiao-keng/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="spring-security中遇见的耗时小坑">
+                            
+                            <span class="card-title">spring-security中遇见的耗时小坑</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                🍐 背景客户现场运维同事反馈某系统输入正确的用户名、密码后，无法进入系统首页。地址栏中地址却在 SSO server 和系统地址之间来回跳转，系统日志中也没有相关的日志提供线索。听到这里就晓得，不是一个运维同学在白盒的情况下，能解决的问题
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-10
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/code/" class="post-category">
+                                    code
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/spring-security/">
+                            <span class="chip bg-color">spring-security</span>
+                        </a>
+                        
+                        <a href="/tags/cas/">
+                            <span class="chip bg-color">cas</span>
+                        </a>
+                        
+                        <a href="/tags/relogin/">
+                            <span class="chip bg-color">relogin</span>
+                        </a>
+                        
+                        <a href="/tags/code/">
+                            <span class="chip bg-color">code</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/04/02/npm-link-vuex-watch-zen-me-bu-sheng-xiao/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="npm-link VUEX watch 怎么不生效">
+                            
+                            <span class="card-title">npm-link VUEX watch 怎么不生效</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                🐱 背景前端项目 package.json 相当于后端 maven 项目 pom.xml 文件管理项目组件依赖。需要走 npm install --save-dev xxxx 引入方式。对于项目中存在多项目共用的前端组件开发，不希望每次修
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-02
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/code/" class="post-category">
+                                    code
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/npm-link/">
+                            <span class="chip bg-color">npm-link</span>
+                        </a>
+                        
+                        <a href="/tags/code/">
+                            <span class="chip bg-color">code</span>
+                        </a>
+                        
+                        <a href="/tags/npm/">
+                            <span class="chip bg-color">npm</span>
+                        </a>
+                        
+                        <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                            <span class="chip bg-color">前端</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
+
 
 
     <footer class="page-footer bg-color">

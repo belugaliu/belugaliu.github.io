@@ -6,7 +6,7 @@
   <link href="https://belugaliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://belugaliu.github.io/"/>
-  <updated>2024-02-01T01:39:18.985Z</updated>
+  <updated>2024-02-18T04:46:29.756Z</updated>
   <id>https://belugaliu.github.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>怎么实现 mybatis 自动设置创建时间更新时间</title>
+    <link href="https://belugaliu.github.io/2024/02/18/zen-me-shi-xian-mybatis-zi-dong-she-zhi-chuang-jian-shi-jian-geng-xin-shi-jian/"/>
+    <id>https://belugaliu.github.io/2024/02/18/zen-me-shi-xian-mybatis-zi-dong-she-zhi-chuang-jian-shi-jian-geng-xin-shi-jian/</id>
+    <published>2024-02-18T12:41:41.000Z</published>
+    <updated>2024-02-18T04:46:29.756Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;怎么实现-mybatis-自动设置创建时间更新时间&quot;&gt;&lt;a href=&quot;#怎么实现-mybatis-自动设置创建时间更新时间&quot; class=&quot;headerlink&quot; title=&quot;怎么实现 mybatis 自动设置创建时间更新时间&quot;&gt;&lt;/a&gt;怎么实现</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="https://belugaliu.github.io/categories/code/"/>
+    
+    
+    <category term="code" scheme="https://belugaliu.github.io/tags/code/"/>
+    
+    <category term="mybatis" scheme="https://belugaliu.github.io/tags/mybatis/"/>
+    
+    <category term="mybatis-plus" scheme="https://belugaliu.github.io/tags/mybatis-plus/"/>
+    
+    <category term="自动填充" scheme="https://belugaliu.github.io/tags/%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Redis 分布式锁你续约了吗</title>
     <link href="https://belugaliu.github.io/2024/01/31/redis-fen-bu-shi-suo-ni-xu-yue-liao-ma/"/>
     <id>https://belugaliu.github.io/2024/01/31/redis-fen-bu-shi-suo-ni-xu-yue-liao-ma/</id>
     <published>2024-01-31T21:38:27.000Z</published>
-    <updated>2024-02-01T01:39:18.985Z</updated>
+    <updated>2024-02-18T04:46:29.752Z</updated>
     
     
       
@@ -34,12 +65,14 @@
     
     
     
-    <category term="分布式锁" scheme="https://belugaliu.github.io/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/"/>
+    <category term="code" scheme="https://belugaliu.github.io/categories/code/"/>
     
     
     <category term="分布式锁" scheme="https://belugaliu.github.io/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/"/>
     
     <category term="redis" scheme="https://belugaliu.github.io/tags/redis/"/>
+    
+    <category term="code" scheme="https://belugaliu.github.io/tags/code/"/>
     
   </entry>
   
@@ -47,8 +80,8 @@
     <title>json 工具我应该怎么选？</title>
     <link href="https://belugaliu.github.io/2023/05/18/json-gong-ju-wo-ying-gai-zen-me-xuan/"/>
     <id>https://belugaliu.github.io/2023/05/18/json-gong-ju-wo-ying-gai-zen-me-xuan/</id>
-    <published>2023-05-18T15:25:00.000Z</published>
-    <updated>2023-05-18T17:31:28.458Z</updated>
+    <published>2023-05-18T23:25:00.000Z</published>
+    <updated>2024-02-18T04:46:29.756Z</updated>
     
     
       
@@ -61,19 +94,21 @@
     
     
     
-    <category term="tools" scheme="https://belugaliu.github.io/categories/tools/"/>
+    <category term="选型" scheme="https://belugaliu.github.io/categories/%E9%80%89%E5%9E%8B/"/>
     
     
     <category term="tools" scheme="https://belugaliu.github.io/tags/tools/"/>
+    
+    <category term="选型" scheme="https://belugaliu.github.io/tags/%E9%80%89%E5%9E%8B/"/>
     
   </entry>
   
   <entry>
     <title>spring-boot-security OAuth2应用实现</title>
-    <link href="https://belugaliu.github.io/2023/04/10/spring-boot-security-oauth2-ying-yong-shi-xian/"/>
-    <id>https://belugaliu.github.io/2023/04/10/spring-boot-security-oauth2-ying-yong-shi-xian/</id>
-    <published>2023-04-10T16:08:54.000Z</published>
-    <updated>2023-04-21T18:23:17.490Z</updated>
+    <link href="https://belugaliu.github.io/2023/04/11/spring-boot-security-oauth2-ying-yong-shi-xian/"/>
+    <id>https://belugaliu.github.io/2023/04/11/spring-boot-security-oauth2-ying-yong-shi-xian/</id>
+    <published>2023-04-11T00:08:54.000Z</published>
+    <updated>2024-02-18T04:46:29.756Z</updated>
     
     
       
@@ -86,7 +121,7 @@
     
     
     
-    <category term="spring-security" scheme="https://belugaliu.github.io/categories/spring-security/"/>
+    <category term="code" scheme="https://belugaliu.github.io/categories/code/"/>
     
     
     <category term="spring-security" scheme="https://belugaliu.github.io/tags/spring-security/"/>
@@ -97,14 +132,16 @@
     
     <category term="pre-security" scheme="https://belugaliu.github.io/tags/pre-security/"/>
     
+    <category term="code" scheme="https://belugaliu.github.io/tags/code/"/>
+    
   </entry>
   
   <entry>
     <title>spring-security中遇见的耗时小坑</title>
     <link href="https://belugaliu.github.io/2023/04/10/spring-security-zhong-yu-jian-de-hao-shi-xiao-keng/"/>
     <id>https://belugaliu.github.io/2023/04/10/spring-security-zhong-yu-jian-de-hao-shi-xiao-keng/</id>
-    <published>2023-04-10T14:01:52.000Z</published>
-    <updated>2023-04-10T16:09:23.001Z</updated>
+    <published>2023-04-10T22:01:52.000Z</published>
+    <updated>2024-02-18T04:46:29.756Z</updated>
     
     
       
@@ -117,7 +154,7 @@
     
     
     
-    <category term="spring-security" scheme="https://belugaliu.github.io/categories/spring-security/"/>
+    <category term="code" scheme="https://belugaliu.github.io/categories/code/"/>
     
     
     <category term="spring-security" scheme="https://belugaliu.github.io/tags/spring-security/"/>
@@ -126,14 +163,16 @@
     
     <category term="relogin" scheme="https://belugaliu.github.io/tags/relogin/"/>
     
+    <category term="code" scheme="https://belugaliu.github.io/tags/code/"/>
+    
   </entry>
   
   <entry>
     <title>npm-link VUEX watch 怎么不生效</title>
     <link href="https://belugaliu.github.io/2023/04/02/npm-link-vuex-watch-zen-me-bu-sheng-xiao/"/>
     <id>https://belugaliu.github.io/2023/04/02/npm-link-vuex-watch-zen-me-bu-sheng-xiao/</id>
-    <published>2023-04-02T11:07:36.000Z</published>
-    <updated>2023-04-10T14:06:12.483Z</updated>
+    <published>2023-04-02T19:07:36.000Z</published>
+    <updated>2024-02-18T04:46:29.756Z</updated>
     
     
       
@@ -146,12 +185,16 @@
     
     
     
-    <category term="npm" scheme="https://belugaliu.github.io/categories/npm/"/>
+    <category term="code" scheme="https://belugaliu.github.io/categories/code/"/>
     
-    
-    <category term="tools" scheme="https://belugaliu.github.io/tags/tools/"/>
     
     <category term="npm-link" scheme="https://belugaliu.github.io/tags/npm-link/"/>
+    
+    <category term="code" scheme="https://belugaliu.github.io/tags/code/"/>
+    
+    <category term="npm" scheme="https://belugaliu.github.io/tags/npm/"/>
+    
+    <category term="前端" scheme="https://belugaliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -159,8 +202,8 @@
     <title>gitlab 上和项目大仓库说再见</title>
     <link href="https://belugaliu.github.io/2023/03/27/gitlab-shang-he-xiang-mu-da-cang-ku-shuo-zai-jian/"/>
     <id>https://belugaliu.github.io/2023/03/27/gitlab-shang-he-xiang-mu-da-cang-ku-shuo-zai-jian/</id>
-    <published>2023-03-27T05:00:03.000Z</published>
-    <updated>2023-03-30T13:53:13.656Z</updated>
+    <published>2023-03-27T13:00:03.000Z</published>
+    <updated>2024-02-18T04:46:29.752Z</updated>
     
     
       
@@ -173,7 +216,7 @@
     
     
     
-    <category term="tools" scheme="https://belugaliu.github.io/categories/tools/"/>
+    <category term="杂项" scheme="https://belugaliu.github.io/categories/%E6%9D%82%E9%A1%B9/"/>
     
     
     <category term="tools" scheme="https://belugaliu.github.io/tags/tools/"/>
@@ -181,6 +224,8 @@
     <category term="gitlab" scheme="https://belugaliu.github.io/tags/gitlab/"/>
     
     <category term="BFG" scheme="https://belugaliu.github.io/tags/BFG/"/>
+    
+    <category term="杂项" scheme="https://belugaliu.github.io/tags/%E6%9D%82%E9%A1%B9/"/>
     
   </entry>
   
