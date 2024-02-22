@@ -6,7 +6,7 @@
   <link href="https://belugaliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://belugaliu.github.io/"/>
-  <updated>2024-02-22T15:22:16.333Z</updated>
+  <updated>2024-02-22T15:28:32.372Z</updated>
   <id>https://belugaliu.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://belugaliu.github.io/2024/02/22/chu-hu-yi-wai-de-xi-tong-dang-ji/"/>
     <id>https://belugaliu.github.io/2024/02/22/chu-hu-yi-wai-de-xi-tong-dang-ji/</id>
     <published>2024-02-22T23:14:53.000Z</published>
-    <updated>2024-02-22T15:22:16.333Z</updated>
+    <updated>2024-02-22T15:28:32.372Z</updated>
     
     
       
@@ -35,6 +35,12 @@
     
     
     
+    <category term="code" scheme="https://belugaliu.github.io/categories/code/"/>
+    
+    
+    <category term="code" scheme="https://belugaliu.github.io/tags/code/"/>
+    
+    <category term="exception" scheme="https://belugaliu.github.io/tags/exception/"/>
     
   </entry>
   
@@ -43,7 +49,7 @@
     <link href="https://belugaliu.github.io/2024/02/18/zen-me-shi-xian-mybatis-zi-dong-she-zhi-chuang-jian-shi-jian-geng-xin-shi-jian/"/>
     <id>https://belugaliu.github.io/2024/02/18/zen-me-shi-xian-mybatis-zi-dong-she-zhi-chuang-jian-shi-jian-geng-xin-shi-jian/</id>
     <published>2024-02-18T12:41:41.000Z</published>
-    <updated>2024-02-22T15:22:16.333Z</updated>
+    <updated>2024-02-22T15:28:32.372Z</updated>
     
     
       
@@ -74,7 +80,7 @@
     <link href="https://belugaliu.github.io/2024/01/31/redis-fen-bu-shi-suo-ni-xu-yue-liao-ma/"/>
     <id>https://belugaliu.github.io/2024/01/31/redis-fen-bu-shi-suo-ni-xu-yue-liao-ma/</id>
     <published>2024-01-31T21:38:27.000Z</published>
-    <updated>2024-02-22T15:22:16.329Z</updated>
+    <updated>2024-02-22T15:28:32.368Z</updated>
     
     
       
@@ -103,7 +109,7 @@
     <link href="https://belugaliu.github.io/2023/05/18/json-gong-ju-wo-ying-gai-zen-me-xuan/"/>
     <id>https://belugaliu.github.io/2023/05/18/json-gong-ju-wo-ying-gai-zen-me-xuan/</id>
     <published>2023-05-18T23:25:00.000Z</published>
-    <updated>2024-02-22T15:22:16.333Z</updated>
+    <updated>2024-02-22T15:28:32.372Z</updated>
     
     
       
@@ -130,7 +136,7 @@
     <link href="https://belugaliu.github.io/2023/04/11/spring-boot-security-oauth2-ying-yong-shi-xian/"/>
     <id>https://belugaliu.github.io/2023/04/11/spring-boot-security-oauth2-ying-yong-shi-xian/</id>
     <published>2023-04-11T00:08:54.000Z</published>
-    <updated>2024-02-22T15:22:16.333Z</updated>
+    <updated>2024-02-22T15:28:32.372Z</updated>
     
     
       
@@ -163,7 +169,7 @@
     <link href="https://belugaliu.github.io/2023/04/10/spring-security-zhong-yu-jian-de-hao-shi-xiao-keng/"/>
     <id>https://belugaliu.github.io/2023/04/10/spring-security-zhong-yu-jian-de-hao-shi-xiao-keng/</id>
     <published>2023-04-10T22:01:52.000Z</published>
-    <updated>2024-02-22T15:22:16.333Z</updated>
+    <updated>2024-02-22T15:28:32.372Z</updated>
     
     
       
@@ -194,7 +200,7 @@
     <link href="https://belugaliu.github.io/2023/04/02/npm-link-vuex-watch-zen-me-bu-sheng-xiao/"/>
     <id>https://belugaliu.github.io/2023/04/02/npm-link-vuex-watch-zen-me-bu-sheng-xiao/</id>
     <published>2023-04-02T19:07:36.000Z</published>
-    <updated>2024-02-22T15:22:16.333Z</updated>
+    <updated>2024-02-22T15:28:32.372Z</updated>
     
     
       
@@ -225,7 +231,7 @@
     <link href="https://belugaliu.github.io/2023/03/27/gitlab-shang-he-xiang-mu-da-cang-ku-shuo-zai-jian/"/>
     <id>https://belugaliu.github.io/2023/03/27/gitlab-shang-he-xiang-mu-da-cang-ku-shuo-zai-jian/</id>
     <published>2023-03-27T13:00:03.000Z</published>
-    <updated>2024-02-22T15:22:16.329Z</updated>
+    <updated>2024-02-22T15:28:32.368Z</updated>
     
     
       

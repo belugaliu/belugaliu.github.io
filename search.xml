@@ -8,9 +8,23 @@
       <link href="/2024/02/22/chu-hu-yi-wai-de-xi-tong-dang-ji/"/>
       <url>/2024/02/22/chu-hu-yi-wai-de-xi-tong-dang-ji/</url>
       
-        <content type="html"><![CDATA[<p>出乎意外的 “系统宕机”</p><p>我徒弟一个刚毕业的精神小伙，近期处理现场提交的工单问题。驻地告诉他系统每天在用户下班后会宕机，需要他每天上班启动系统。徒弟没什么经验，就让线程调大内存参数 <code>-Xmx 16g -Xms 8g</code> 观察。第二天，驻地还是告诉他依旧是用户下班后会宕机。徒弟也是摸不到头脑找到了我。</p><p><img src="/images/2024/notinmind_systemexit/3641708614410_.pic.jpg" alt="exitjpg"></p><h3 id="出乎意外，情理之中"><a href="#出乎意外，情理之中" class="headerlink" title="出乎意外，情理之中"></a>出乎意外，情理之中</h3><p>首先，确定是否内存 OOM 导致宕机。在图片中是通过 <code>-XX:+HeapDumpOnOutOfMemoryError</code> 启动 OOM 是生成堆 dump 文件， OOM 是堆 dump 文件 <code>-XX:HeapDumpPath</code> 配置指定位置。 是否存在堆 dump 文件。<strong>驻地回答说目录下没有任何文件。难道 OOM 启动配置是后加的？</strong></p><p><img src="/images/2024/notinmind_systemexit/cocall61708612842881.jpg" alt="startjpg"></p><p>其次，让驻地通过 linux 系统日志看能不能找到 OOM 的蛛丝马迹。随即发去搜索命令 <code>dmesg | grep -i -B10 'killed process'</code> 和 <code>grep -i 'killed process' /var/log/messages</code> 。<strong>驻地回答说没有任何内容输出。</strong></p><p>再想想驻地说的话，都是下班后宕机，下班后系统业务并不多，想再看看系统日志，确定什么时候宕机的。结果发现直到 <code>23:59:59</code> 都有数据库链接的测试日志。那是凌晨宕机？但是日志已经被驻地手动启动覆盖了。<span class="github-emoji"><span>🌟</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> <strong>手动启动</strong> ，回看图片驻地的启动方式是命令行里输入 <code>java -jar xxx.jar &amp;</code> 这是同步启动非后台启动，如果出现窗口失效断开连接的话，是会让程序走正常系统退出，驻地发回来的退出系统照片能匹配上。</p><p>最终，让他修改成 <code>nohup java -jar xxx.jar &gt; /dev/null 2&gt;&amp;1 &amp;</code> 启动，第二天不再出现所谓的 “系统宕机”。</p><p><img src="/images/2024/notinmind_systemexit/12.png" alt="12png"></p>]]></content>
+        <content type="html"><![CDATA[<p>出乎意外的 “系统宕机”</p><p>我徒弟一个刚毕业的精神小伙，近期处理现场提交的工单问题。驻地告诉他系统每天在用户下班后会宕机，需要他每天上班启动系统。徒弟没什么经验，就让线程调大内存参数 <code>-Xmx 16g -Xms 8g</code> 观察。第二天，驻地还是告诉他依旧是用户下班后会宕机。徒弟也是摸不到头脑找到了我。</p><p><img src="/images/2024/notinmind_systemexit/3641708614410_.pic.jpg"></p><h3 id="出乎意外，情理之中"><a href="#出乎意外，情理之中" class="headerlink" title="出乎意外，情理之中"></a>出乎意外，情理之中</h3><p>首先，确定是否内存 OOM 导致宕机。在图片中是通过 <code>-XX:+HeapDumpOnOutOfMemoryError</code> 启动 OOM 是生成堆 dump 文件， OOM 是堆 dump 文件 <code>-XX:HeapDumpPath</code> 配置指定位置。 是否存在堆 dump 文件。<strong>驻地回答说目录下没有任何文件。难道 OOM 启动配置是后加的？</strong></p><p><img src="/images/2024/notinmind_systemexit/cocall61708612842881.jpg"></p><p>其次，让驻地通过 linux 系统日志看能不能找到 OOM 的蛛丝马迹。随即发去搜索命令 <code>dmesg | grep -i -B10 'killed process'</code> 和 <code>grep -i 'killed process' /var/log/messages</code> 。<strong>驻地回答说没有任何内容输出。</strong></p><p>再想想驻地说的话，都是下班后宕机，下班后系统业务并不多，想再看看系统日志，确定什么时候宕机的。结果发现直到 <code>23:59:59</code> 都有数据库链接的测试日志。那是凌晨宕机？但是日志已经被驻地手动启动覆盖了。<span class="github-emoji"><span>🌟</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> <strong>手动启动</strong> ，回看图片驻地的启动方式是命令行里输入 <code>java -jar xxx.jar &amp;</code> 这是同步启动非后台启动，如果出现窗口失效断开连接的话，是会让程序走正常系统退出，驻地发回来的退出系统照片能匹配上。</p><p>最终，让他修改成 <code>nohup java -jar xxx.jar &gt; /dev/null 2&gt;&amp;1 &amp;</code> 启动，第二天不再出现所谓的 “系统宕机”。</p><p><img src="/images/2024/notinmind_systemexit/12.png"></p>]]></content>
       
       
+      <categories>
+          
+          <category> code </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> code </tag>
+            
+            <tag> exception </tag>
+            
+        </tags>
       
     </entry>
     
