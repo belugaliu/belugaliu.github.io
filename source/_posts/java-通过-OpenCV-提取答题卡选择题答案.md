@@ -5,11 +5,8 @@ categories:
 - tools
 tags:
 - opencv
-- 答题区
 - tesseract
 ---
-## java 通过 OpenCV 提取答题卡选择题答案
-
 ### 答题卡识别技术选型
 
 OpenCV（Open Source Computer Vision Library） 是一种开源计算机视觉库，它提供了一些用于处理图像和视频的工具和算法。用于处理图片的纠偏。

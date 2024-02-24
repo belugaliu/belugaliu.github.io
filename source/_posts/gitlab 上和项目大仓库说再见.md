@@ -2,7 +2,7 @@
 title: gitlab 上和项目大仓库说再见
 date: 2023-03-27 13:00:03
 categories:
-- 杂项
+- tools
 tags:
 - 杂项
 - tools
