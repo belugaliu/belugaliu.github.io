@@ -6,7 +6,7 @@
   <link href="https://belugaliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://belugaliu.github.io/"/>
-  <updated>2024-03-22T05:42:22.877Z</updated>
+  <updated>2024-03-31T16:50:26.786Z</updated>
   <id>https://belugaliu.github.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>算法小白-B树、B+树和B*树</title>
+    <link href="https://belugaliu.github.io/2024/04/01/suan-fa-xiao-bai-b-shu-b-shu-he-b-shu/"/>
+    <id>https://belugaliu.github.io/2024/04/01/suan-fa-xiao-bai-b-shu-b-shu-he-b-shu/</id>
+    <published>2024-04-01T00:48:12.000Z</published>
+    <updated>2024-03-31T16:50:26.786Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;算法篇-—-B-树-、-B-树-和-B-树&quot;&gt;&lt;a href=&quot;#算法篇-—-B-树-、-B-树-和-B-树&quot; class=&quot;headerlink&quot; title=&quot;算法篇 — B 树 、 B+ 树 和 B* 树&quot;&gt;&lt;/a&gt;算法篇 — B 树 、 B+ 树 和</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://belugaliu.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法" scheme="https://belugaliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="查找" scheme="https://belugaliu.github.io/tags/%E6%9F%A5%E6%89%BE/"/>
+    
+    <category term="树" scheme="https://belugaliu.github.io/tags/%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JVM 的垃圾回收器们</title>
     <link href="https://belugaliu.github.io/2024/03/22/jvm-de-la-ji-hui-shou-qi-men/"/>
     <id>https://belugaliu.github.io/2024/03/22/jvm-de-la-ji-hui-shou-qi-men/</id>
     <published>2024-03-22T13:28:28.000Z</published>
-    <updated>2024-03-22T05:42:22.877Z</updated>
+    <updated>2024-03-31T16:50:26.758Z</updated>
     
     
       
