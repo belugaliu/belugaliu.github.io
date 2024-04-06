@@ -6,7 +6,7 @@
   <link href="https://belugaliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://belugaliu.github.io/"/>
-  <updated>2024-03-31T16:50:26.786Z</updated>
+  <updated>2024-04-06T04:45:52.490Z</updated>
   <id>https://belugaliu.github.io/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>vue 5w 个节点树性能优化</title>
+    <link href="https://belugaliu.github.io/2024/04/06/vue-5w-ge-jie-dian-shu-xing-neng-you-hua/"/>
+    <id>https://belugaliu.github.io/2024/04/06/vue-5w-ge-jie-dian-shu-xing-neng-you-hua/</id>
+    <published>2024-04-06T12:42:11.000Z</published>
+    <updated>2024-04-06T04:45:52.490Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;近期工作中针对档案文件型树展示完成优化。优化目标为在&lt;strong&gt;秒级&lt;/strong&gt;装载页面，并且操作不允许卡顿。而基本要求支撑&lt;strong&gt;万级&lt;/strong&gt;文件的展示与操作。&lt;/p&gt;
+&lt;p&gt;在优化之前，页面装载 5w 材料量全部装载完毕大约在</summary>
+        
+      
+    
+    
+    
+    <category term="优化" scheme="https://belugaliu.github.io/categories/%E4%BC%98%E5%8C%96/"/>
+    
+    
+    <category term="code" scheme="https://belugaliu.github.io/tags/code/"/>
+    
+    <category term="前端" scheme="https://belugaliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="vue" scheme="https://belugaliu.github.io/tags/vue/"/>
+    
+    <category term="虚拟列表" scheme="https://belugaliu.github.io/tags/%E8%99%9A%E6%8B%9F%E5%88%97%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>算法小白-B树、B+树和B*树</title>
     <link href="https://belugaliu.github.io/2024/04/01/suan-fa-xiao-bai-b-shu-b-shu-he-b-shu/"/>
     <id>https://belugaliu.github.io/2024/04/01/suan-fa-xiao-bai-b-shu-b-shu-he-b-shu/</id>
     <published>2024-04-01T00:48:12.000Z</published>
-    <updated>2024-03-31T16:50:26.786Z</updated>
+    <updated>2024-04-06T04:45:52.490Z</updated>
     
     
       
@@ -50,7 +82,7 @@
     <link href="https://belugaliu.github.io/2024/03/22/jvm-de-la-ji-hui-shou-qi-men/"/>
     <id>https://belugaliu.github.io/2024/03/22/jvm-de-la-ji-hui-shou-qi-men/</id>
     <published>2024-03-22T13:28:28.000Z</published>
-    <updated>2024-03-31T16:50:26.758Z</updated>
+    <updated>2024-04-06T04:45:52.462Z</updated>
     
     
       
