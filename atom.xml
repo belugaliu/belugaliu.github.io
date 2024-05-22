@@ -6,7 +6,7 @@
   <link href="https://belugaliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://belugaliu.github.io/"/>
-  <updated>2024-05-22T02:00:45.858Z</updated>
+  <updated>2024-05-22T09:16:50.459Z</updated>
   <id>https://belugaliu.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>前端样式布局自适应小结</title>
+    <link href="https://belugaliu.github.io/2024/05/22/qian-duan-yang-shi-bu-ju-zi-gua-ying-xiao-jie/"/>
+    <id>https://belugaliu.github.io/2024/05/22/qian-duan-yang-shi-bu-ju-zi-gua-ying-xiao-jie/</id>
+    <published>2024-05-22T17:15:01.000Z</published>
+    <updated>2024-05-22T09:16:50.459Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一般用来搭建布局使用的块元素是 &lt;code&gt;div&lt;/code&gt; ，但你可以使用内联元素（例如，&lt;code&gt;span&lt;/code&gt; 等）通过设置 &lt;code&gt;display: inline-block&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="https://belugaliu.github.io/categories/code/"/>
+    
+    
+    <category term="前端" scheme="https://belugaliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="css" scheme="https://belugaliu.github.io/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PDF文件WEB端加速装载</title>
     <link href="https://belugaliu.github.io/2024/05/22/pdf-wen-jian-web-duan-jia-su-zhuang-zai/"/>
     <id>https://belugaliu.github.io/2024/05/22/pdf-wen-jian-web-duan-jia-su-zhuang-zai/</id>
     <published>2024-05-22T09:50:59.000Z</published>
-    <updated>2024-05-22T02:00:45.858Z</updated>
+    <updated>2024-05-22T09:16:50.431Z</updated>
     
     
       
@@ -53,7 +80,7 @@
     <link href="https://belugaliu.github.io/2024/04/06/vue-5w-ge-jie-dian-shu-xing-neng-you-hua/"/>
     <id>https://belugaliu.github.io/2024/04/06/vue-5w-ge-jie-dian-shu-xing-neng-you-hua/</id>
     <published>2024-04-06T12:42:11.000Z</published>
-    <updated>2024-05-22T02:00:45.886Z</updated>
+    <updated>2024-05-22T09:16:50.459Z</updated>
     
     
       
@@ -85,7 +112,7 @@
     <link href="https://belugaliu.github.io/2024/04/01/suan-fa-xiao-bai-b-shu-b-shu-he-b-shu/"/>
     <id>https://belugaliu.github.io/2024/04/01/suan-fa-xiao-bai-b-shu-b-shu-he-b-shu/</id>
     <published>2024-04-01T00:48:12.000Z</published>
-    <updated>2024-05-22T02:00:45.886Z</updated>
+    <updated>2024-05-22T09:16:50.459Z</updated>
     
     
       
@@ -114,7 +141,7 @@
     <link href="https://belugaliu.github.io/2024/03/22/jvm-de-la-ji-hui-shou-qi-men/"/>
     <id>https://belugaliu.github.io/2024/03/22/jvm-de-la-ji-hui-shou-qi-men/</id>
     <published>2024-03-22T13:28:28.000Z</published>
-    <updated>2024-05-22T02:00:45.858Z</updated>
+    <updated>2024-05-22T09:16:50.431Z</updated>
     
     
       
