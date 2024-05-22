@@ -6,7 +6,7 @@
   <link href="https://belugaliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://belugaliu.github.io/"/>
-  <updated>2024-04-06T04:48:14.877Z</updated>
+  <updated>2024-05-22T02:00:45.858Z</updated>
   <id>https://belugaliu.github.io/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>PDF文件WEB端加速装载</title>
+    <link href="https://belugaliu.github.io/2024/05/22/pdf-wen-jian-web-duan-jia-su-zhuang-zai/"/>
+    <id>https://belugaliu.github.io/2024/05/22/pdf-wen-jian-web-duan-jia-su-zhuang-zai/</id>
+    <published>2024-05-22T09:50:59.000Z</published>
+    <updated>2024-05-22T02:00:45.858Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;当出现大文件 pdf 装载时，pdf.js 使用分段下载和期望 pdf 是线性化 pdf 来达到尽可能快的加载 pdf 首页。对于小文件 pdf.js 则是等待 pdf 完整下载后再分析加载 pdf 首页。&lt;/p&gt;
+&lt;p&gt;但是，在项目运行过程中并没有看到 pdf.js</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="https://belugaliu.github.io/categories/code/"/>
+    
+    
+    <category term="前端" scheme="https://belugaliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="PDF" scheme="https://belugaliu.github.io/tags/PDF/"/>
+    
+    <category term="javascript" scheme="https://belugaliu.github.io/tags/javascript/"/>
+    
+    <category term="pdf.js" scheme="https://belugaliu.github.io/tags/pdf-js/"/>
+    
+  </entry>
+  
+  <entry>
     <title>vue 5w 个节点树性能优化</title>
     <link href="https://belugaliu.github.io/2024/04/06/vue-5w-ge-jie-dian-shu-xing-neng-you-hua/"/>
     <id>https://belugaliu.github.io/2024/04/06/vue-5w-ge-jie-dian-shu-xing-neng-you-hua/</id>
     <published>2024-04-06T12:42:11.000Z</published>
-    <updated>2024-04-06T04:48:14.877Z</updated>
+    <updated>2024-05-22T02:00:45.886Z</updated>
     
     
       
@@ -53,7 +85,7 @@
     <link href="https://belugaliu.github.io/2024/04/01/suan-fa-xiao-bai-b-shu-b-shu-he-b-shu/"/>
     <id>https://belugaliu.github.io/2024/04/01/suan-fa-xiao-bai-b-shu-b-shu-he-b-shu/</id>
     <published>2024-04-01T00:48:12.000Z</published>
-    <updated>2024-04-06T04:48:14.877Z</updated>
+    <updated>2024-05-22T02:00:45.886Z</updated>
     
     
       
@@ -82,7 +114,7 @@
     <link href="https://belugaliu.github.io/2024/03/22/jvm-de-la-ji-hui-shou-qi-men/"/>
     <id>https://belugaliu.github.io/2024/03/22/jvm-de-la-ji-hui-shou-qi-men/</id>
     <published>2024-03-22T13:28:28.000Z</published>
-    <updated>2024-04-06T04:48:14.841Z</updated>
+    <updated>2024-05-22T02:00:45.858Z</updated>
     
     
       
