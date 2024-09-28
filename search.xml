@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>好用的 nodejs 多版本管理工具 nvm</title>
+      <link href="/2024/09/28/hao-yong-de-nodejs-duo-ban-ben-guan-li-gong-ju-nvm/"/>
+      <url>/2024/09/28/hao-yong-de-nodejs-duo-ban-ben-guan-li-gong-ju-nvm/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://github.com/nvm-sh/nvm">nvm</a> 是一款能够在一台主机上通过命令切换 node 版本，适合于需要支持多个项目且项目之间需要不同版本的 nodejs。安装 nvm 后可以指定下载不同 node 版本，切换 node 版本也是一条命令的事情，简单好操作。</p><h3 id="安装命令"><a href="#安装命令" class="headerlink" title="安装命令"></a>安装命令</h3><p>使用 curl 命令 或 wget 命令安装，需要执行 <code>install.sh</code> 。</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh <span class="token operator">|</span> <span class="token function">bash</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh <span class="token operator">|</span> <span class="token function">bash</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>脚本运行的目的是将 nvm 资源路径设置为 <code>~/.nvm</code> 并且安装路径设置为环境变量。</p><h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><h4 id="安装-nodejs"><a href="#安装-nodejs" class="headerlink" title="安装 nodejs"></a>安装 nodejs</h4><p>安装指定版本的 nodejs，如果只是输入大版本号则安装大版本号下的最新小版本的 nodejs.</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 直接安装指定版本号的 nodejs</span>nvm <span class="token function">install</span> <span class="token number">12.22</span>.6<span class="token comment"># 直接安装指定大版本号下最新版本的 nodejs</span>nvm <span class="token function">install</span> <span class="token number">12</span><span class="token comment"># 直接安装 nodejs 发布的最新版本包</span>nvm <span class="token function">install</span> <span class="token function">node</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>相应的卸载就是 install 换成 uninstall.</p><h4 id="切换使用-nodejs"><a href="#切换使用-nodejs" class="headerlink" title="切换使用 nodejs"></a>切换使用 nodejs</h4><p>切换使用指定版本的 nodejs</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 代表使用本地安装的12大版本下最大版本的 nodejs</span>nvm use <span class="token number">12</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h4 id="其他常用命令"><a href="#其他常用命令" class="headerlink" title="其他常用命令"></a>其他常用命令</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 列出本地可用的 nodejs 版本号</span>nvm <span class="token function">ls</span><span class="token comment"># 查看 nodejs 版本的安装路径</span>nvm <span class="token function">which</span> v20.13.1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>剩余其他包含指定镜像仓库等直接在 <code>github</code> 上找。ÍÍ</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> tools </tag>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>虚拟列表基本实现</title>
       <link href="/2024/07/22/xu-ni-lie-biao-ji-ben-shi-xian/"/>
       <url>/2024/07/22/xu-ni-lie-biao-ji-ben-shi-xian/</url>
