@@ -6,7 +6,7 @@
   <link href="https://belugaliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://belugaliu.github.io/"/>
-  <updated>2024-09-28T10:10:08.806Z</updated>
+  <updated>2024-10-10T06:49:11.956Z</updated>
   <id>https://belugaliu.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>PDF 合并大文件的 battle</title>
+    <link href="https://belugaliu.github.io/2024/10/10/pdf-he-bing-da-wen-jian-de-battle/"/>
+    <id>https://belugaliu.github.io/2024/10/10/pdf-he-bing-da-wen-jian-de-battle/</id>
+    <published>2024-10-10T14:05:28.000Z</published>
+    <updated>2024-10-10T06:49:11.956Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;目前在市面上流通的 java PDF 操作组件有 &lt;a href=&quot;https://pdfbox.apache.org/&quot;&gt;PDFbox&lt;/a&gt; 和 &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="https://belugaliu.github.io/categories/code/"/>
+    
+    
+    <category term="PDF" scheme="https://belugaliu.github.io/tags/PDF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>好用的 nodejs 多版本管理工具 nvm</title>
     <link href="https://belugaliu.github.io/2024/09/28/hao-yong-de-nodejs-duo-ban-ben-guan-li-gong-ju-nvm/"/>
     <id>https://belugaliu.github.io/2024/09/28/hao-yong-de-nodejs-duo-ban-ben-guan-li-gong-ju-nvm/</id>
     <published>2024-09-28T18:08:23.000Z</published>
-    <updated>2024-09-28T10:10:08.806Z</updated>
+    <updated>2024-10-10T06:49:11.988Z</updated>
     
     
       
@@ -48,7 +73,7 @@
     <link href="https://belugaliu.github.io/2024/07/22/xu-ni-lie-biao-ji-ben-shi-xian/"/>
     <id>https://belugaliu.github.io/2024/07/22/xu-ni-lie-biao-ji-ben-shi-xian/</id>
     <published>2024-07-22T16:46:59.000Z</published>
-    <updated>2024-09-28T10:10:08.806Z</updated>
+    <updated>2024-10-10T06:49:11.988Z</updated>
     
     
       
@@ -73,7 +98,7 @@
     <link href="https://belugaliu.github.io/2024/05/22/qian-duan-yang-shi-bu-ju-zi-gua-ying-xiao-jie/"/>
     <id>https://belugaliu.github.io/2024/05/22/qian-duan-yang-shi-bu-ju-zi-gua-ying-xiao-jie/</id>
     <published>2024-05-22T17:15:01.000Z</published>
-    <updated>2024-09-28T10:10:08.806Z</updated>
+    <updated>2024-10-10T06:49:11.988Z</updated>
     
     
       
@@ -100,7 +125,7 @@
     <link href="https://belugaliu.github.io/2024/05/22/pdf-wen-jian-web-duan-jia-su-zhuang-zai/"/>
     <id>https://belugaliu.github.io/2024/05/22/pdf-wen-jian-web-duan-jia-su-zhuang-zai/</id>
     <published>2024-05-22T09:50:59.000Z</published>
-    <updated>2024-09-28T10:10:08.781Z</updated>
+    <updated>2024-10-10T06:49:11.956Z</updated>
     
     
       
@@ -132,7 +157,7 @@
     <link href="https://belugaliu.github.io/2024/04/06/vue-5w-ge-jie-dian-shu-xing-neng-you-hua/"/>
     <id>https://belugaliu.github.io/2024/04/06/vue-5w-ge-jie-dian-shu-xing-neng-you-hua/</id>
     <published>2024-04-06T12:42:11.000Z</published>
-    <updated>2024-09-28T10:10:08.806Z</updated>
+    <updated>2024-10-10T06:49:11.988Z</updated>
     
     
       
@@ -164,7 +189,7 @@
     <link href="https://belugaliu.github.io/2024/04/01/suan-fa-xiao-bai-b-shu-b-shu-he-b-shu/"/>
     <id>https://belugaliu.github.io/2024/04/01/suan-fa-xiao-bai-b-shu-b-shu-he-b-shu/</id>
     <published>2024-04-01T00:48:12.000Z</published>
-    <updated>2024-09-28T10:10:08.806Z</updated>
+    <updated>2024-10-10T06:49:11.988Z</updated>
     
     
       
@@ -193,7 +218,7 @@
     <link href="https://belugaliu.github.io/2024/03/22/jvm-de-la-ji-hui-shou-qi-men/"/>
     <id>https://belugaliu.github.io/2024/03/22/jvm-de-la-ji-hui-shou-qi-men/</id>
     <published>2024-03-22T13:28:28.000Z</published>
-    <updated>2024-09-28T10:10:08.781Z</updated>
+    <updated>2024-10-10T06:49:11.956Z</updated>
     
     
       
