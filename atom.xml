@@ -6,7 +6,7 @@
   <link href="https://belugaliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://belugaliu.github.io/"/>
-  <updated>2024-10-10T06:49:11.956Z</updated>
+  <updated>2024-10-25T10:15:24.292Z</updated>
   <id>https://belugaliu.github.io/</id>
   
   <author>
@@ -17,11 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>使用篡改猴和 python 求（pa）梯子外文档和视频</title>
+    <link href="https://belugaliu.github.io/2024/10/25/shi-yong-cuan-gai-hou-he-python-qiu-pa-ti-zi-wai-wen-dang-he-shi-pin/"/>
+    <id>https://belugaliu.github.io/2024/10/25/shi-yong-cuan-gai-hou-he-python-qiu-pa-ti-zi-wai-wen-dang-he-shi-pin/</id>
+    <published>2024-10-25T18:11:02.000Z</published>
+    <updated>2024-10-25T10:15:24.292Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;半年前，我受朋友委托请求帮忙 pa 国外网站学习资源。时间有点久，最近有空闲时间就来看看能不能搞。pa 这套资源，分析后有几个情况&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;该网站是有 2FA 认证&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;PDF 是使用 chrome</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="https://belugaliu.github.io/categories/code/"/>
+    
+    
+    <category term="code" scheme="https://belugaliu.github.io/tags/code/"/>
+    
+    <category term="tampermonkey" scheme="https://belugaliu.github.io/tags/tampermonkey/"/>
+    
+    <category term="python" scheme="https://belugaliu.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PDF 合并大文件的 battle</title>
     <link href="https://belugaliu.github.io/2024/10/10/pdf-he-bing-da-wen-jian-de-battle/"/>
     <id>https://belugaliu.github.io/2024/10/10/pdf-he-bing-da-wen-jian-de-battle/</id>
     <published>2024-10-10T14:05:28.000Z</published>
-    <updated>2024-10-10T06:49:11.956Z</updated>
+    <updated>2024-10-25T10:15:24.260Z</updated>
     
     
       
@@ -46,7 +79,7 @@
     <link href="https://belugaliu.github.io/2024/09/28/hao-yong-de-nodejs-duo-ban-ben-guan-li-gong-ju-nvm/"/>
     <id>https://belugaliu.github.io/2024/09/28/hao-yong-de-nodejs-duo-ban-ben-guan-li-gong-ju-nvm/</id>
     <published>2024-09-28T18:08:23.000Z</published>
-    <updated>2024-10-10T06:49:11.988Z</updated>
+    <updated>2024-10-25T10:15:24.292Z</updated>
     
     
       
@@ -73,7 +106,7 @@
     <link href="https://belugaliu.github.io/2024/07/22/xu-ni-lie-biao-ji-ben-shi-xian/"/>
     <id>https://belugaliu.github.io/2024/07/22/xu-ni-lie-biao-ji-ben-shi-xian/</id>
     <published>2024-07-22T16:46:59.000Z</published>
-    <updated>2024-10-10T06:49:11.988Z</updated>
+    <updated>2024-10-25T10:15:24.292Z</updated>
     
     
       
@@ -98,7 +131,7 @@
     <link href="https://belugaliu.github.io/2024/05/22/qian-duan-yang-shi-bu-ju-zi-gua-ying-xiao-jie/"/>
     <id>https://belugaliu.github.io/2024/05/22/qian-duan-yang-shi-bu-ju-zi-gua-ying-xiao-jie/</id>
     <published>2024-05-22T17:15:01.000Z</published>
-    <updated>2024-10-10T06:49:11.988Z</updated>
+    <updated>2024-10-25T10:15:24.292Z</updated>
     
     
       
@@ -125,7 +158,7 @@
     <link href="https://belugaliu.github.io/2024/05/22/pdf-wen-jian-web-duan-jia-su-zhuang-zai/"/>
     <id>https://belugaliu.github.io/2024/05/22/pdf-wen-jian-web-duan-jia-su-zhuang-zai/</id>
     <published>2024-05-22T09:50:59.000Z</published>
-    <updated>2024-10-10T06:49:11.956Z</updated>
+    <updated>2024-10-25T10:15:24.260Z</updated>
     
     
       
@@ -157,7 +190,7 @@
     <link href="https://belugaliu.github.io/2024/04/06/vue-5w-ge-jie-dian-shu-xing-neng-you-hua/"/>
     <id>https://belugaliu.github.io/2024/04/06/vue-5w-ge-jie-dian-shu-xing-neng-you-hua/</id>
     <published>2024-04-06T12:42:11.000Z</published>
-    <updated>2024-10-10T06:49:11.988Z</updated>
+    <updated>2024-10-25T10:15:24.292Z</updated>
     
     
       
@@ -189,7 +222,7 @@
     <link href="https://belugaliu.github.io/2024/04/01/suan-fa-xiao-bai-b-shu-b-shu-he-b-shu/"/>
     <id>https://belugaliu.github.io/2024/04/01/suan-fa-xiao-bai-b-shu-b-shu-he-b-shu/</id>
     <published>2024-04-01T00:48:12.000Z</published>
-    <updated>2024-10-10T06:49:11.988Z</updated>
+    <updated>2024-10-25T10:15:24.292Z</updated>
     
     
       
@@ -218,7 +251,7 @@
     <link href="https://belugaliu.github.io/2024/03/22/jvm-de-la-ji-hui-shou-qi-men/"/>
     <id>https://belugaliu.github.io/2024/03/22/jvm-de-la-ji-hui-shou-qi-men/</id>
     <published>2024-03-22T13:28:28.000Z</published>
-    <updated>2024-10-10T06:49:11.956Z</updated>
+    <updated>2024-10-25T10:15:24.260Z</updated>
     
     
       

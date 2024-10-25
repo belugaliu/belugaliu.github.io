@@ -4,9 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="gitlab 上和项目大仓库说再见, beluga">
-    <meta name="description" content="🐱 背景git clone 项目耗时很长。原因，网速慢或是代码仓库文件很大(n+ G)。本篇文章就讲述如何给 gitlab 代码仓库减负。
-🐶 基础知识项目在 gitlab 中显示的仓库大小 = 项目文件总大小 + .git （隐藏）目">
+    <meta name="keywords" content="使用篡改猴和 python 求（pa）梯子外文档和视频, beluga">
+    <meta name="description" content="半年前，我受朋友委托请求帮忙 pa 国外网站学习资源。时间有点久，最近有空闲时间就来看看能不能搞。pa 这套资源，分析后有几个情况
+
+该网站是有 2FA 认证
+
+PDF 是使用 chrome 内置程序展示，好在页面上提供了下载图标和链接
+
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +23,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>gitlab 上和项目大仓库说再见 | beluga</title>
+    <title>使用篡改猴和 python 求（pa）梯子外文档和视频 | beluga</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -336,12 +341,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">gitlab 上和项目大仓库说再见</h1>
+                    <h1 class="description center-align post-title">使用篡改猴和 python 求（pa）梯子外文档和视频</h1>
                 </div>
             </div>
         </div>
@@ -365,20 +370,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/tools/">
-                                <span class="chip bg-color">tools</span>
+                            <a href="/tags/code/">
+                                <span class="chip bg-color">code</span>
                             </a>
                         
-                            <a href="/tags/gitlab/">
-                                <span class="chip bg-color">gitlab</span>
+                            <a href="/tags/tampermonkey/">
+                                <span class="chip bg-color">tampermonkey</span>
                             </a>
                         
-                            <a href="/tags/BFG/">
-                                <span class="chip bg-color">BFG</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%9D%82%E9%A1%B9/">
-                                <span class="chip bg-color">杂项</span>
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
                             </a>
                         
                     </div>
@@ -389,8 +390,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/tools/" class="post-category">
-                                tools
+                            <a href="/categories/code/" class="post-category">
+                                code
                             </a>
                         
                     </div>
@@ -402,7 +403,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-03-27
+                    2024-10-25
                 </div>
                 
 
@@ -411,7 +412,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    912
                 </div>
                 
 
@@ -441,72 +442,104 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="cat-背景"><a href="#cat-背景" class="headerlink" title=":cat: 背景"></a><span class="github-emoji"><span>🐱</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f431.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 背景</h2><p><code>git clone</code> 项目耗时很长。原因，网速慢或是代码仓库文件很大(n+ G)。本篇文章就讲述如何给 <code>gitlab</code> 代码仓库减负。</p>
-<h3 id="dog-基础知识"><a href="#dog-基础知识" class="headerlink" title=":dog: 基础知识"></a><span class="github-emoji"><span>🐶</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f436.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 基础知识</h3><p>项目在 gitlab 中显示的仓库大小 = 项目文件总大小 + <code>.git</code> （隐藏）目录下文件大小。请认真关注你项目目录文件大小（windows 可以用 <a target="_blank" rel="noopener" href="https://www.jam-software.com/treesize_free">treesize free</a> / <a target="_blank" rel="noopener" href="http://www.uderzo.it/main_products/space_sniffer/download_alt.html">SpaceSniffer</a> 工具，linux 可以用命令 <code>du -h –max-depth=1 *</code>，mac 命令 <code>du -h -d 1 *</code> ），一般 <code>.git</code> 目录下文件大小 &gt;= 项目文件大小。意味着，项目整体下载空间占用 &gt;= 2 * 项目文件大小。所以，如果项目中包含比较大的文件，例如视频，高清照片等，把 gitlab 当做了<strong>共享备份存储空间</strong>是项目文件大的罪魁祸手。所以，项目初期代码一定和需求文档做剥离，除非你的项目足够的小。</p>
-<h3 id="fish-拯救-git-仓库"><a href="#fish-拯救-git-仓库" class="headerlink" title=":fish: 拯救 git 仓库"></a><span class="github-emoji"><span>🐟</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f41f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 拯救 git 仓库</h3><p>对于需求文档类项目而言，建议用 <code>git lfs</code> 做大文件管理（此处 <code>git lfs</code> 不做过多介绍，请点击<a target="_blank" rel="noopener" href="https://git-lfs.github.com/">链接</a>了解）。请多想想后面加入的需求人，给他们的加入减少一些绊脚石。</p>
-<blockquote>
-<p><span class="github-emoji"><span>💡</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a1.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 仅使用几次，过一个月之后基本不翻的东西、无需版本管理、内容超过 100 MB 的视频，请慎重放入 git 仓库</p>
-</blockquote>
-<h3 id="whale-分析-git-大仓库"><a href="#whale-分析-git-大仓库" class="headerlink" title=":whale: 分析 git 大仓库"></a><span class="github-emoji"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 分析 git 大仓库</h3><ul>
-<li><p>windows 上使用 <code>TreeSize Free</code>  看看文件大小占比分布。发现，项目本身文件大小大约 900 MB ，<code>.git</code> 目录吃掉 2.6 GB。原因，其实上面基础知识算是解答了一部分，感兴趣的同学可以参考附件<strong>git 原理</strong>找答案。</p>
-<p><img src="/images/2023/gitlab_bigcodes/directory_image.png"></p>
+                <p>半年前，我受朋友委托请求帮忙 pa 国外网站学习资源。时间有点久，最近有空闲时间就来看看能不能搞。pa 这套资源，分析后有几个情况</p>
+<ol>
+<li><p>该网站是有 2FA 认证</p>
 </li>
-<li><p>使用 <code>git verify-pack</code>  命令运行  <code>git verify-pack -v .git/objects/pack/pack-f0fa1a09cd9ebf8874e4ecafa9e56be7816097de.idx|sort -k 3 -n| tail -10</code> ，查找出文件大小在前 10 的文件 hash 标识。注意，windows 上请使用 <code>git Bash Here </code> 运行。</p>
-<p><img src="/images/2023/gitlab_bigcodes/git_xpack.png"></p>
+<li><p>PDF 是使用 chrome 内置程序展示，好在页面上提供了下载图标和链接</p>
 </li>
-<li><p>使用命令 <code>git rev-list</code> 运行 <code>git rev-list --objects --all|grep  hashId </code> 定位大文件路径。此处，处理文件大小超过 100 MB。</p>
-<p><img src="/images/2023/gitlab_bigcodes/directory_file.png"></p>
+<li><p>视频是使用 video 标签展示并支持播放，视频是 mp4，被分片为 ts 由 m3u8 记录分片列表</p>
 </li>
-<li><p>按照路径和 <code>git log</code> 查找提交人，确定文件是否存在，且是否需要存在。确定需要清理的为 <code>xxxx.asf</code> 和 <code>xxx.asf</code> 两个文件。已经删除的文件，却在日志里能搜索出来，原因是防止你执行 <code>git revert</code> 还原到删除前的 commitId 版本。所以，清理原则就是需要<strong>明确</strong>哪些文件要删除，没有机会还原的话，就删除吧。</p>
-<blockquote>
-<p><span class="github-emoji"><span>💡</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a1.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 有重命名/移动目录需求，请使用 <code>git mv</code>  命令，而达到目录变更及命名功能。不要使用 <code>git mv</code> 和 <code>git add</code> 的方式，完成文件重命名或移动目录。这样会造成有删除的用不到的记录。</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="dolphin-如何清理"><a href="#dolphin-如何清理" class="headerlink" title=":dolphin: 如何清理"></a><span class="github-emoji"><span>🐬</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f42c.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 如何清理</h2><blockquote>
-<p>在清理之前，建议所有人的分支都 push 到远端。否则，其他人的每次的 push 都会让你的清理都需要重新来一次。</p>
-</blockquote>
-<p>目前，主要有两种方法：</p>
-<ul>
-<li><p>git 原生支持的 <code>filter-branch</code> 分支文件，命令 <code>git filter-branch --force --tree-filter 'rm -f path/to/big_file.mpg' HEAD</code> 。（不推荐。对于超多 commit 的项目，<code>filter-branch</code> 慢的怀疑人生，小编就是从 <code>git filter-branch</code> 放弃，转投 <code>BFG</code>）</p>
-</li>
-<li><p><code>BFG</code> 工具</p>
-<ul>
-<li><p>执行命令 <code>git clone --mirror git-repository-url</code>  clone git 仓库</p>
-</li>
-<li><p>执行命令 <code>java -jar bfg.jar --massive-non-file-objects-sized-up-to 100M --delete-files '{xxx.asf,xxx.asf}' thunisoft-mvd.git</code>。</p>
-<blockquote>
-<p><code>BFG</code> 对于需要清理的 history 会更改涉及文件的提交的 commit-id。具体老新 commit-id 的对应关系文件在 <code>thunisoft-mvd.git.bfg-report\2020-07-17\16-14-13\object-id-map.old-new.txt</code> 中<br>此时，<code>.git/objects</code> 下的  <code>pack/xxxxx.pack</code>  文件会被解压为  n 个 <code>git objects</code> 对象文件</p>
-</blockquote>
-</li>
-</ul>
-<p>  <img src="/images/2023/gitlab_bigcodes/log_for_bfg.png"></p>
-</li>
-<li><p>执行命令 <code>git reflog expire --expire=now --all &amp;&amp; git gc --prune=now --aggressive</code> ，将 git object 对象压缩。而后，执行命令 <code>git push</code> 推送远端。</p>
-<blockquote>
-<p>注意：推送之前解除仓库的 <code>Protected Branches</code> 的配置</p>
-</blockquote>
-</li>
-</ul>
-<p>  <img src="/images/2023/gitlab_bigcodes/git_compress.png"></p>
-<ul>
-<li>请项目组所有成员放弃原本的本地项目仓库，重新 clone git 项目。因为，如果用原来的仓库你会发现本地 <code>.git</code> 会更大，因为除了 <code>git gc</code> 重新生成的 <code>pack</code> 文件之外，还有本地本身老的 <code>pack</code> 文件。</li>
-</ul>
-<p><strong>最终和派生项目对比，除 <code>.git</code> 目录外其他相同。</strong></p>
-<p><img src="/images/2023/gitlab_bigcodes/gitcode_compare.png"></p>
-<p><strong>为什么存在不到 1 KB 的文件？因为，本项目使用 <code>git lfs</code> 做了大文件管理，使用 <code>git lfs pull</code> 可以从远端拉下 1 KB 映射的原文件</strong><br><strong><font color="red">清理完成，2.4 GB -&gt; 1.1 GB 的转身</font></strong></p>
-<h2 id="lion-特别说明"><a href="#lion-特别说明" class="headerlink" title=":lion: 特别说明"></a><span class="github-emoji"><span>🦁</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f981.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 特别说明</h2><ul>
-<li>项目使用 <code>git lfs</code> 管理大文件之后，使用 <code>BFG</code> 清理完对项目本身没有任何影响。照样，可以使用 <code>git lfs</code> 命令管理文件。</li>
-<li>真实项目在清理前，请先按照本文先 <code>clone</code> 出一份，熟悉一下清理流程，更有底气。</li>
-</ul>
-<h2 id="horse-附录"><a href="#horse-附录" class="headerlink" title=":horse: 附录"></a><span class="github-emoji"><span>🐴</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f434.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 附录</h2><ul>
-<li><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2018/10/git-internals.html">git 原理-阮一峰</a></li>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/45510461">git 原理</a></li>
-<li><a target="_blank" rel="noopener" href="https://docs.github.com/cn/github/managing-large-files/removing-files-from-git-large-file-storage#removing-a-single-file">git 大文件清理-github</a></li>
-<li><a target="_blank" rel="noopener" href="http://gitlab.thunisoft.com/help/user/project/repository/reducing_the_repo_size_using_git.md">git 大文件清理-gitlab</a>，目前不用上传 <code>object-id-map.old-new.txt</code> 文件，走 “开始清理” 这步骤</li>
-<li><a target="_blank" rel="noopener" href="https://rtyley.github.io/bfg-repo-cleaner/">git BFG</a></li>
-<li><a target="_blank" rel="noopener" href="https://learngitbranching.js.org/?locale=zh_CN">git 练习场</a></li>
-<li><a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2">git 学习文档</a></li>
+</ol>
+<p>其中，文档资源的下载链接需要通过网站登录验证，所以这类资源最好是通过浏览器下载。因为一般的绕不过 2FA 认证。视频资源的下载链接不需要通过网站登录验证，下载流量是直接打到网站提供的存储，这对爬虫来说是个福音。随后确定文档类资源使用篡改猴下载，视频类资源使用 python 下载。</p>
+<h3 id="文档类资源下-pa-载-chong"><a href="#文档类资源下-pa-载-chong" class="headerlink" title="文档类资源下 (pa) 载 (chong)"></a>文档类资源下 (pa) 载 (chong)</h3><p><a target="_blank" rel="noopener" href="https://www.tampermonkey.net/index.php?src=a&amp;locale=zh_CN#google_vignette">篡改猴 tampermonkey</a>，它允许用户自定义并<strong>增强您最喜爱的网页的功能</strong>。用户脚本是小型 JavaScript 程序，可用于向网页添加新功能或修改现有功能。使用 篡改猴，您可以轻松在任何网站上创建、管理和运行这些用户脚本。可以使用 blob 将视频类资源下载地址保存到本地</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> videoUrls <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> videoBlob <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Blob</span><span class="token punctuation">(</span><span class="token punctuation">[</span>videoUrls<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'text/plain'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> videoLink <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+videoLink<span class="token punctuation">.</span>href <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">createObjectURL</span><span class="token punctuation">(</span>videoBlob<span class="token punctuation">)</span><span class="token punctuation">;</span>
+videoLink<span class="token punctuation">.</span>download<span class="token operator">=</span>course <span class="token operator">+</span><span class="token string">'_'</span><span class="token operator">+</span>item<span class="token operator">+</span><span class="token string">'_video.txt'</span><span class="token punctuation">;</span>
+videoLink<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>关于文档下载 javascript 直接使用 <code>window.open(downloadUrl, '_blank')</code> 完成下载。需要在浏览器设置访问 PDF 时是直接下载，不是在 chrome 中打开 PDF 文件，访问 <code>chrome://settings/content/pdfDocuments</code> 可修改，记得重启浏览器。</p>
+<h4 id="chrome-下载历史记录在哪里"><a href="#chrome-下载历史记录在哪里" class="headerlink" title="chrome 下载历史记录在哪里"></a>chrome 下载历史记录在哪里</h4><p>我本次的 pa 虫，需要按照页面进行文档分类，所以需要按照下载地址映射下载的文件，这需要 chrome 下载历史记录。而 chrome 下载历史记录，在 <code>${chrome_data_home}/History</code> 文件中，<code>${chrome_data_home}</code> 来自于 <code>chrome://version/</code> 的<strong>个人资料路径</strong>。History 文件是 sqlite 数据库文件。剩下的你懂的。</p>
+<h3 id="视频类资源下-pa-载-chong"><a href="#视频类资源下-pa-载-chong" class="headerlink" title="视频类资源下 (pa) 载 (chong)"></a>视频类资源下 (pa) 载 (chong)</h3><p>python 视频下载代码比较多，而 ts 和 m3u8 文件下载完之后，需要使用 ffmpeg 完成视频的合并。ffmpeg 需要下载，编译后的 ffmpeg <a target="_blank" rel="noopener" href="https://www.osxexperts.net/">下载地址</a>，自己编译<a target="_blank" rel="noopener" href="https://ffmpeg.org/download.html">访问地址</a>。整个的下载代码如下</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os<span class="token punctuation">.</span>path
+<span class="token keyword">import</span> urllib<span class="token punctuation">.</span>parse
+<span class="token keyword">import</span> requests
+<span class="token keyword">import</span> shutil
+<span class="token keyword">import</span> subprocess
+<span class="token keyword">import</span> concurrent<span class="token punctuation">.</span>futures
+
+
+<span class="token keyword">def</span> <span class="token function">download_mp4_part_file</span><span class="token punctuation">(</span>dir_path<span class="token punctuation">,</span> video_url<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    download_part_sfile<span class="token punctuation">(</span>dir_path<span class="token punctuation">,</span> video_url<span class="token punctuation">)</span>
+    video_file_name <span class="token operator">=</span> video_url<span class="token punctuation">[</span>video_url<span class="token punctuation">.</span>rindex<span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+    video_file_prefix <span class="token operator">=</span> video_url<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span> video_url<span class="token punctuation">.</span>rindex<span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    video_file_path <span class="token operator">=</span> dir_path <span class="token operator">+</span> <span class="token string">'/'</span> <span class="token operator">+</span> video_file_name
+    <span class="token keyword">if</span> video_file_name<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">'m3u8'</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span>
+        <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>video_file_path<span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+            lines <span class="token operator">=</span> f<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        ts_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> line <span class="token keyword">in</span> lines<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> <span class="token keyword">not</span> line<span class="token punctuation">.</span>startswith<span class="token punctuation">(</span><span class="token string">'#'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> line<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">'m3u8'</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span>
+                    download_mp4_part_file<span class="token punctuation">(</span>dir_path<span class="token punctuation">,</span> video_file_prefix <span class="token operator">+</span> <span class="token string">"/"</span> <span class="token operator">+</span> line<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token keyword">elif</span> line<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">'.ts'</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span>
+                    ts_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>video_file_prefix<span class="token operator">+</span><span class="token string">'/'</span><span class="token operator">+</span>line<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>ts_list<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword">with</span> concurrent<span class="token punctuation">.</span>futures<span class="token punctuation">.</span>ThreadPoolExecutor<span class="token punctuation">(</span>max_workers<span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">)</span> <span class="token keyword">as</span> executor<span class="token punctuation">:</span>
+                futures <span class="token operator">=</span> <span class="token punctuation">[</span>executor<span class="token punctuation">.</span>submit<span class="token punctuation">(</span>download_part_sfile<span class="token punctuation">,</span> dir_path<span class="token punctuation">,</span> ts_url<span class="token punctuation">)</span> <span class="token keyword">for</span> ts_url <span class="token keyword">in</span> ts_list<span class="token punctuation">]</span>
+                <span class="token keyword">for</span> future <span class="token keyword">in</span> concurrent<span class="token punctuation">.</span>futures<span class="token punctuation">.</span>as_completed<span class="token punctuation">(</span>futures<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    result <span class="token operator">=</span> future<span class="token punctuation">.</span>result<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">download_part_sfile</span><span class="token punctuation">(</span>dir_path<span class="token punctuation">,</span> video_url<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    video_file_name <span class="token operator">=</span> video_url<span class="token punctuation">[</span>video_url<span class="token punctuation">.</span>rindex<span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+    video_file_path <span class="token operator">=</span> dir_path <span class="token operator">+</span> <span class="token string">'/'</span> <span class="token operator">+</span> video_file_name
+    <span class="token keyword">if</span> <span class="token keyword">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>video_file_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>video_url<span class="token punctuation">)</span>
+        <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>video_file_path<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+            <span class="token builtin">file</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span>response<span class="token punctuation">.</span>content<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token boolean">True</span>
+
+
+<span class="token keyword">def</span> <span class="token function">download_file</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> module_name<span class="token punctuation">,</span> module_video<span class="token punctuation">,</span> video_url<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    video_name <span class="token operator">=</span> module_video<span class="token punctuation">[</span>module_video<span class="token punctuation">.</span>rindex<span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+    video_name <span class="token operator">=</span> urllib<span class="token punctuation">.</span>parse<span class="token punctuation">.</span>unquote<span class="token punctuation">(</span>video_name<span class="token punctuation">)</span>
+    video_part_name <span class="token operator">=</span> video_name<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span> video_name<span class="token punctuation">.</span>rindex<span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    video_dir_path <span class="token operator">=</span> path <span class="token operator">+</span> <span class="token string">'/'</span> <span class="token operator">+</span> module_name <span class="token operator">+</span> <span class="token string">'/'</span> <span class="token operator">+</span> video_part_name
+    <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>video_dir_path<span class="token operator">+</span><span class="token string">'.mp4'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>video_dir_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span>video_dir_path<span class="token punctuation">,</span> <span class="token number">0o777</span><span class="token punctuation">)</span>
+    download_mp4_part_file<span class="token punctuation">(</span>video_dir_path<span class="token punctuation">,</span> video_url<span class="token punctuation">)</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        video_file_name <span class="token operator">=</span> video_url<span class="token punctuation">[</span>video_url<span class="token punctuation">.</span>rindex<span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+        subprocess<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'ffmpeg'</span><span class="token punctuation">,</span> <span class="token string">'-i'</span><span class="token punctuation">,</span> video_dir_path<span class="token operator">+</span><span class="token string">'/'</span> <span class="token operator">+</span> video_file_name<span class="token punctuation">,</span> <span class="token string">'-c'</span><span class="token punctuation">,</span> <span class="token string">'copy'</span><span class="token punctuation">,</span> video_dir_path<span class="token operator">+</span><span class="token string">'.mp4'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">except</span> BaseException <span class="token keyword">as</span> exc<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>module_video <span class="token operator">+</span> <span class="token string">","</span> <span class="token operator">+</span> video_url <span class="token operator">+</span> <span class="token string">"合并视频失败"</span> <span class="token operator">+</span> exc<span class="token punctuation">)</span>
+    <span class="token keyword">finally</span><span class="token punctuation">:</span>
+        shutil<span class="token punctuation">.</span>rmtree<span class="token punctuation">(</span>video_dir_path<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">download</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> module_map<span class="token punctuation">,</span> videos<span class="token punctuation">,</span> video_map<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> module_key<span class="token punctuation">,</span> module_videos <span class="token keyword">in</span> videos<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        module_name <span class="token operator">=</span> module_map<span class="token punctuation">[</span>module_key<span class="token punctuation">]</span>
+        bilibili_videos <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> module_video <span class="token keyword">in</span> module_videos<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> module_video<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">'bilibili'</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span>
+                bilibili_videos<span class="token punctuation">.</span>append<span class="token punctuation">(</span>module_video<span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                video_url <span class="token operator">=</span> video_map<span class="token punctuation">[</span>module_video<span class="token punctuation">]</span>
+                download_file<span class="token punctuation">(</span>path<span class="token punctuation">,</span> module_name<span class="token punctuation">,</span> module_video<span class="token punctuation">,</span> video_url<span class="token punctuation">)</span>
+        other_video_path <span class="token operator">=</span> path <span class="token operator">+</span> <span class="token string">"/"</span> <span class="token operator">+</span> module_name <span class="token operator">+</span> <span class="token string">"/other_video_url.txt"</span>
+        other_video_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>other_video_path<span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> bilibili_video <span class="token keyword">in</span> bilibili_videos<span class="token punctuation">:</span>
+            other_video_file<span class="token punctuation">.</span>write<span class="token punctuation">(</span>bilibili_video<span class="token punctuation">)</span>
+            other_video_file<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span>
+        other_video_file<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://www.foxtonforensics.com/browser-history-examiner/chrome-history-location">chrome 用户目录文件解析</a></li>
 </ul>
 
                 
@@ -534,7 +567,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://belugaliu.github.io/2023/03/27/gitlab-shang-he-xiang-mu-da-cang-ku-shuo-zai-jian/">https://belugaliu.github.io/2023/03/27/gitlab-shang-he-xiang-mu-da-cang-ku-shuo-zai-jian/</a>
+                    <a href="https://belugaliu.github.io/2024/10/25/shi-yong-cuan-gai-hou-he-python-qiu-pa-ti-zi-wai-wen-dang-he-shi-pin/">https://belugaliu.github.io/2024/10/25/shi-yong-cuan-gai-hou-he-python-qiu-pa-ti-zi-wai-wen-dang-he-shi-pin/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -572,20 +605,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/tools/">
-                                    <span class="chip bg-color">tools</span>
+                                <a href="/tags/code/">
+                                    <span class="chip bg-color">code</span>
                                 </a>
                             
-                                <a href="/tags/gitlab/">
-                                    <span class="chip bg-color">gitlab</span>
+                                <a href="/tags/tampermonkey/">
+                                    <span class="chip bg-color">tampermonkey</span>
                                 </a>
                             
-                                <a href="/tags/BFG/">
-                                    <span class="chip bg-color">BFG</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%9D%82%E9%A1%B9/">
-                                    <span class="chip bg-color">杂项</span>
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
                                 </a>
                             
                         </div>
@@ -631,17 +660,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/04/02/npm-link-vuex-watch-zen-me-bu-sheng-xiao/">
+                <a href="/2024/10/25/shi-yong-cuan-gai-hou-he-python-qiu-pa-ti-zi-wai-wen-dang-he-shi-pin/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="npm-link VUEX watch 怎么不生效">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="使用篡改猴和 python 求（pa）梯子外文档和视频">
                         
-                        <span class="card-title">npm-link VUEX watch 怎么不生效</span>
+                        <span class="card-title">使用篡改猴和 python 求（pa）梯子外文档和视频</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -651,9 +681,67 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-02
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-10-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/code/" class="post-category">
+                                    code
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/code/">
+                        <span class="chip bg-color">code</span>
+                    </a>
+                    
+                    <a href="/tags/tampermonkey/">
+                        <span class="chip bg-color">tampermonkey</span>
+                    </a>
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/10/10/pdf-he-bing-da-wen-jian-de-battle/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="PDF 合并大文件的 battle">
+                        
+                        <span class="card-title">PDF 合并大文件的 battle</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-10-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -669,82 +757,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/npm-link/">
-                        <span class="chip bg-color">npm-link</span>
-                    </a>
-                    
-                    <a href="/tags/code/">
-                        <span class="chip bg-color">code</span>
-                    </a>
-                    
-                    <a href="/tags/npm/">
-                        <span class="chip bg-color">npm</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                        <span class="chip bg-color">前端</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/03/27/gitlab-shang-he-xiang-mu-da-cang-ku-shuo-zai-jian/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="gitlab 上和项目大仓库说再见">
-                        
-                        <span class="card-title">gitlab 上和项目大仓库说再见</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-27
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/tools/" class="post-category">
-                                    tools
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/tools/">
-                        <span class="chip bg-color">tools</span>
-                    </a>
-                    
-                    <a href="/tags/gitlab/">
-                        <span class="chip bg-color">gitlab</span>
-                    </a>
-                    
-                    <a href="/tags/BFG/">
-                        <span class="chip bg-color">BFG</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%9D%82%E9%A1%B9/">
-                        <span class="chip bg-color">杂项</span>
+                    <a href="/tags/PDF/">
+                        <span class="chip bg-color">PDF</span>
                     </a>
                     
                 </div>
