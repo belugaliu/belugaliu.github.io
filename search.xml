@@ -67,7 +67,7 @@
       
       <categories>
           
-          <category> 工具 </category>
+          <category> tools </category>
           
       </categories>
       
@@ -75,8 +75,6 @@
         <tags>
             
             <tag> tools </tag>
-            
-            <tag> 工具 </tag>
             
         </tags>
       
@@ -156,8 +154,6 @@
             <tag> 前端 </tag>
             
             <tag> PDF </tag>
-            
-            <tag> javascript </tag>
             
             <tag> pdf.js </tag>
             
