@@ -2,10 +2,9 @@
 title: 好用的 nodejs 多版本管理工具 nvm
 date: 2024-09-28 18:08:23
 categories:
-  - 工具
+  - tools
 tags:
   - tools
-  - 工具
 ---
 
 [nvm](https://github.com/nvm-sh/nvm) 是一款能够在一台主机上通过命令切换 node 版本，适合于需要支持多个项目且项目之间需要不同版本的 nodejs。安装 nvm 后可以指定下载不同 node 版本，切换 node 版本也是一条命令的事情，简单好操作。

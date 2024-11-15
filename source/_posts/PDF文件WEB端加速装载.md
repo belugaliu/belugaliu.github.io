@@ -3,7 +3,6 @@ title: PDF文件WEB端加速装载
 date: 2024-05-22 09:50:59
 tags:
   - PDF
-  - javascript
   - pdf.js
   - 前端
 categories:
