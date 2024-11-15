@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Apple M1 编译 electron sqlite3</title>
+      <link href="/2024/11/15/apple-m1-bian-yi-electron-sqlite3/"/>
+      <url>/2024/11/15/apple-m1-bian-yi-electron-sqlite3/</url>
+      
+        <content type="html"><![CDATA[<p>使用 cnpm 安装的 sqlite3 会出现内核不匹配问题，报错信息如下：</p><pre class="line-numbers language-log" data-language="log"><code class="language-log">App threw an error during load<span class="token property">Error:</span> dlopen<span class="token operator">(</span><span class="token file-path string">/Users/liull/00_beluga/slient-printer-app/node_modules/.store/sqlite3@5.1.7/node_modules/sqlite3/build/Release/node_sqlite3.node</span><span class="token punctuation">,</span> <span class="token number">0x0001</span><span class="token operator">)</span><span class="token operator">:</span> <span class="token property">tried:</span> <span class="token string">'/Users/liull/00_beluga/slient-printer-app/node_modules/.store/sqlite3@5.1.7/node_modules/sqlite3/build/Release/node_sqlite3.node'</span> <span class="token operator">(</span>mach<span class="token operator">-</span>o file<span class="token punctuation">,</span> but is an incompatible architecture <span class="token operator">(</span>have <span class="token string">'x86_64'</span><span class="token punctuation">,</span> need <span class="token string">'arm64'</span><span class="token operator">)</span><span class="token operator">)</span><span class="token punctuation">,</span>  <span class="token string">'/System/Volumes/Preboot/Cryptexes/OS/Users/liull/00_beluga/slient-printer-app/node_modules/.store/sqlite3@5.1.7/node_modules/sqlite3/build/Release/node_sqlite3.node'</span> <span class="token operator">(</span>no such file<span class="token operator">)</span><span class="token punctuation">,</span>   <span class="token string">'/Users/liull/00_beluga/slient-printer-app/node_modules/.store/sqlite3@5.1.7/node_modules/sqlite3/build/Release/node_sqlite3.node'</span> <span class="token operator">(</span>mach<span class="token operator">-</span>o file<span class="token punctuation">,</span> but is an incompatible architecture <span class="token operator">(</span>have <span class="token string">'x86_64'</span><span class="token punctuation">,</span> need <span class="token string">'arm64'</span><span class="token operator">)</span><span class="token operator">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>核心就是下载的 sqlite3 内核是 x86_64 而 apple M1 的内核是 arm64。一种办法是从<a href="https://registry.npmmirror.com/binary.html?path=sqlite3/v5.1.7/">仓库</a> 找准下载替换本地对应 <code>node_modules/sqlite3/build/Release/node_sqlite3.node</code> 路径文件。一种办法是依据源码进行编译。</p><ol><li><p>需要全局安装 electron <code>cnpm install electron -g</code></p></li><li><p>需要全局安装 node-gyp <code>cnpm install node-gyp -g</code></p></li><li><p>下载 sqlite3 源码 <code>cnpm install sqlite3 --ignore-scripts</code>，其中 <code>--ignore-script</code> 是为了防止 sqlite3 自动执行编译</p></li><li><p>手动执行脚本进行编译</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> node_modules/sqlite3node-gyp rebuild <span class="token parameter variable">--target</span><span class="token operator">=</span>electron版本 <span class="token parameter variable">--arch</span><span class="token operator">=</span>arm64 --dist-url<span class="token operator">=</span>https://electronjs.org/headers --module-name<span class="token operator">=</span>node_sqlite3 <span class="token parameter variable">--module_path</span><span class="token operator">=</span><span class="token punctuation">..</span>/lib/binding/napi-v3-darwin-arm64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li><li><p>在项目中运行 <code>cnpm run dev</code> 运行项目后，正常启动</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> code </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> electron </tag>
+            
+            <tag> sqlite3 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Mac 如何添加 CA 证书</title>
       <link href="/2024/11/15/mac-ru-he-tian-jia-ca-zheng-shu/"/>
       <url>/2024/11/15/mac-ru-he-tian-jia-ca-zheng-shu/</url>

@@ -6,7 +6,7 @@
   <link href="https://belugaliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://belugaliu.github.io/"/>
-  <updated>2024-11-15T11:34:47.563Z</updated>
+  <updated>2024-11-15T12:02:12.869Z</updated>
   <id>https://belugaliu.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Apple M1 编译 electron sqlite3</title>
+    <link href="https://belugaliu.github.io/2024/11/15/apple-m1-bian-yi-electron-sqlite3/"/>
+    <id>https://belugaliu.github.io/2024/11/15/apple-m1-bian-yi-electron-sqlite3/</id>
+    <published>2024-11-15T20:00:03.000Z</published>
+    <updated>2024-11-15T12:02:12.869Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;使用 cnpm 安装的 sqlite3 会出现内核不匹配问题，报错信息如下：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-log&quot; data-language=&quot;log&quot;&gt;&lt;code class=&quot;language-log&quot;&gt;App</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="https://belugaliu.github.io/categories/code/"/>
+    
+    
+    <category term="electron" scheme="https://belugaliu.github.io/tags/electron/"/>
+    
+    <category term="sqlite3" scheme="https://belugaliu.github.io/tags/sqlite3/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Mac 如何添加 CA 证书</title>
     <link href="https://belugaliu.github.io/2024/11/15/mac-ru-he-tian-jia-ca-zheng-shu/"/>
     <id>https://belugaliu.github.io/2024/11/15/mac-ru-he-tian-jia-ca-zheng-shu/</id>
     <published>2024-11-15T19:27:29.000Z</published>
-    <updated>2024-11-15T11:34:47.563Z</updated>
+    <updated>2024-11-15T12:02:12.869Z</updated>
     
     
       
@@ -48,7 +76,7 @@
     <link href="https://belugaliu.github.io/2024/11/15/jdk-dao-ru-ca-ssl-ren-zheng-chun-jing-ban/"/>
     <id>https://belugaliu.github.io/2024/11/15/jdk-dao-ru-ca-ssl-ren-zheng-chun-jing-ban/</id>
     <published>2024-11-15T11:32:29.000Z</published>
-    <updated>2024-11-15T11:34:47.563Z</updated>
+    <updated>2024-11-15T12:02:12.869Z</updated>
     
     
       
@@ -75,7 +103,7 @@
     <link href="https://belugaliu.github.io/2024/10/25/shi-yong-cuan-gai-hou-he-python-qiu-pa-ti-zi-wai-wen-dang-he-shi-pin/"/>
     <id>https://belugaliu.github.io/2024/10/25/shi-yong-cuan-gai-hou-he-python-qiu-pa-ti-zi-wai-wen-dang-he-shi-pin/</id>
     <published>2024-10-25T18:11:02.000Z</published>
-    <updated>2024-11-15T11:34:47.595Z</updated>
+    <updated>2024-11-15T12:02:12.901Z</updated>
     
     
       
@@ -108,7 +136,7 @@
     <link href="https://belugaliu.github.io/2024/10/10/pdf-he-bing-da-wen-jian-de-battle/"/>
     <id>https://belugaliu.github.io/2024/10/10/pdf-he-bing-da-wen-jian-de-battle/</id>
     <published>2024-10-10T14:05:28.000Z</published>
-    <updated>2024-11-15T11:34:47.563Z</updated>
+    <updated>2024-11-15T12:02:12.869Z</updated>
     
     
       
@@ -133,7 +161,7 @@
     <link href="https://belugaliu.github.io/2024/09/28/hao-yong-de-nodejs-duo-ban-ben-guan-li-gong-ju-nvm/"/>
     <id>https://belugaliu.github.io/2024/09/28/hao-yong-de-nodejs-duo-ban-ben-guan-li-gong-ju-nvm/</id>
     <published>2024-09-28T18:08:23.000Z</published>
-    <updated>2024-11-15T11:34:47.595Z</updated>
+    <updated>2024-11-15T12:02:12.901Z</updated>
     
     
       
@@ -158,7 +186,7 @@
     <link href="https://belugaliu.github.io/2024/07/22/xu-ni-lie-biao-ji-ben-shi-xian/"/>
     <id>https://belugaliu.github.io/2024/07/22/xu-ni-lie-biao-ji-ben-shi-xian/</id>
     <published>2024-07-22T16:46:59.000Z</published>
-    <updated>2024-11-15T11:34:47.595Z</updated>
+    <updated>2024-11-15T12:02:12.901Z</updated>
     
     
       
@@ -183,7 +211,7 @@
     <link href="https://belugaliu.github.io/2024/05/22/qian-duan-yang-shi-bu-ju-zi-gua-ying-xiao-jie/"/>
     <id>https://belugaliu.github.io/2024/05/22/qian-duan-yang-shi-bu-ju-zi-gua-ying-xiao-jie/</id>
     <published>2024-05-22T17:15:01.000Z</published>
-    <updated>2024-11-15T11:34:47.595Z</updated>
+    <updated>2024-11-15T12:02:12.901Z</updated>
     
     
       
@@ -210,7 +238,7 @@
     <link href="https://belugaliu.github.io/2024/05/22/pdf-wen-jian-web-duan-jia-su-zhuang-zai/"/>
     <id>https://belugaliu.github.io/2024/05/22/pdf-wen-jian-web-duan-jia-su-zhuang-zai/</id>
     <published>2024-05-22T09:50:59.000Z</published>
-    <updated>2024-11-15T11:34:47.563Z</updated>
+    <updated>2024-11-15T12:02:12.869Z</updated>
     
     
       
@@ -240,7 +268,7 @@
     <link href="https://belugaliu.github.io/2024/04/06/vue-5w-ge-jie-dian-shu-xing-neng-you-hua/"/>
     <id>https://belugaliu.github.io/2024/04/06/vue-5w-ge-jie-dian-shu-xing-neng-you-hua/</id>
     <published>2024-04-06T12:42:11.000Z</published>
-    <updated>2024-11-15T11:34:47.595Z</updated>
+    <updated>2024-11-15T12:02:12.901Z</updated>
     
     
       
@@ -272,7 +300,7 @@
     <link href="https://belugaliu.github.io/2024/04/01/suan-fa-xiao-bai-b-shu-b-shu-he-b-shu/"/>
     <id>https://belugaliu.github.io/2024/04/01/suan-fa-xiao-bai-b-shu-b-shu-he-b-shu/</id>
     <published>2024-04-01T00:48:12.000Z</published>
-    <updated>2024-11-15T11:34:47.595Z</updated>
+    <updated>2024-11-15T12:02:12.901Z</updated>
     
     
       
@@ -301,7 +329,7 @@
     <link href="https://belugaliu.github.io/2024/03/22/jvm-de-la-ji-hui-shou-qi-men/"/>
     <id>https://belugaliu.github.io/2024/03/22/jvm-de-la-ji-hui-shou-qi-men/</id>
     <published>2024-03-22T13:28:28.000Z</published>
-    <updated>2024-11-15T11:34:47.563Z</updated>
+    <updated>2024-11-15T12:02:12.869Z</updated>
     
     
       
@@ -559,37 +587,6 @@
     <category term="relogin" scheme="https://belugaliu.github.io/tags/relogin/"/>
     
     <category term="code" scheme="https://belugaliu.github.io/tags/code/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>npm-link VUEX watch 怎么不生效</title>
-    <link href="https://belugaliu.github.io/2023/04/02/npm-link-vuex-watch-zen-me-bu-sheng-xiao/"/>
-    <id>https://belugaliu.github.io/2023/04/02/npm-link-vuex-watch-zen-me-bu-sheng-xiao/</id>
-    <published>2023-04-02T11:07:36.000Z</published>
-    <updated>2024-02-18T04:44:53.178Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;cat-背景&quot;&gt;&lt;a href=&quot;#cat-背景&quot; class=&quot;headerlink&quot; title=&quot;:cat: 背景&quot;&gt;&lt;/a&gt;&lt;span class=&quot;github-emoji&quot;&gt;&lt;span&gt;🐱&lt;/span&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="https://belugaliu.github.io/categories/code/"/>
-    
-    
-    <category term="npm-link" scheme="https://belugaliu.github.io/tags/npm-link/"/>
-    
-    <category term="code" scheme="https://belugaliu.github.io/tags/code/"/>
-    
-    <category term="npm" scheme="https://belugaliu.github.io/tags/npm/"/>
-    
-    <category term="前端" scheme="https://belugaliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
