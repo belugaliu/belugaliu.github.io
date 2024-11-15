@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>JDK 导入 (CA) SSL 认证-纯净版</title>
+      <link href="/2024/11/15/jdk-dao-ru-ca-ssl-ren-zheng-chun-jing-ban/"/>
+      <url>/2024/11/15/jdk-dao-ru-ca-ssl-ren-zheng-chun-jing-ban/</url>
+      
+        <content type="html"><![CDATA[<p>JDK 提供 keytool 是密钥和证书管理工具，可以生成证书、导入证书、生成密钥。可以给通过 java 运行程序 https 安全认证，当然不包含tomcat、jetty 容器，他们有自己证书配置。默认 keytool 密码库是 <code>$JAVA_HOME/jre/lib/security/cacerts</code>，如果自身有需要可以通过 <code>keytool -keystore filepath</code> 其中 filepath 可以是绝对路径，也可以仅是文件名，区别在于是在本文件夹下的密码库还是指定文件夹的密码库，<strong>这点很重要</strong>。</p><p>我是在 sonar-maven-plugin 使用时，因 sonar 是 https 注意到 JDK SSL 认证。期间碰到了一些问题，问题都是踩过的坑。</p><ul><li><p><code> sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target</code></p><ul><li><font color="blue">没有指定密钥库或密钥库中没有有效的密钥</font></li></ul></li><li><p><code>java.security.UnrecoverableKeyException: Password verification failed</code></p><ul><li><font color="blue">指定的密钥库对应的密码不正确，当然对应的路径下可能不存在密钥库</font></li></ul></li><li><p><code>java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty</code></p><ul><li><font color="blue">对应的密码库路径不正确</font></li></ul></li></ul><h3 id="JDK-导入-CA-认证"><a href="#JDK-导入-CA-认证" class="headerlink" title="JDK 导入 CA 认证"></a>JDK 导入 CA 认证</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">keytool <span class="token parameter variable">-importcert</span> <span class="token parameter variable">-keystore</span> <span class="token operator">&lt;</span>keystore-file-path<span class="token operator">&gt;</span> <span class="token parameter variable">-alias</span> <span class="token operator">&lt;</span>caAlias<span class="token operator">&gt;</span> <span class="token parameter variable">-file</span> <span class="token operator">&lt;</span>ca-file-path<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li><p>keystore，指定密钥库路径。如果仅文件名，则默认在运行命令的目录创建密钥库。</p></li><li><p>alias，只是用来方便标记认证别名。</p></li><li><p>file，指向 ca 证书</p></li></ul><p>运行命令时，需要设置密码库的使用密码，<strong>这个千万不能忘记</strong>。运行命令后，会在 <code>keystore-file-path</code> 生成相应的密码库文件。可以使用 <code>keytool -list -v -keystore &lt;keystore-file-path&gt;</code> 查看导入证书明细。</p><h3 id="mvn-sonar-运行变量指定"><a href="#mvn-sonar-运行变量指定" class="headerlink" title="mvn sonar 运行变量指定"></a>mvn sonar 运行变量指定</h3><p><code>mvn clean compile sonar:sonar -Djavax.net.ssl.trustStore=&lt;keystore-file-path&gt; -Djavax.net.ssl.trustStorePassword=&lt;keystore-password&gt;</code></p><ul><li><p><code>javax.net.ssl.trustStore</code>，指向密码库的绝对路径</p></li><li><p><code>javax.net.ssl.trustStorePassword</code>，指向密码库的使用密码</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> tools </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> 杂项 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用篡改猴和 python 求（pa）梯子外文档和视频</title>
       <link href="/2024/10/25/shi-yong-cuan-gai-hou-he-python-qiu-pa-ti-zi-wai-wen-dang-he-shi-pin/"/>
       <url>/2024/10/25/shi-yong-cuan-gai-hou-he-python-qiu-pa-ti-zi-wai-wen-dang-he-shi-pin/</url>
