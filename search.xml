@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Mac 如何添加 CA 证书</title>
+      <link href="/2024/11/15/mac-ru-he-tian-jia-ca-zheng-shu/"/>
+      <url>/2024/11/15/mac-ru-he-tian-jia-ca-zheng-shu/</url>
+      
+        <content type="html"><![CDATA[<p>chrome 浏览器访问 https 都会需要验证证书，可以手动添加 CA 证书。Mac 手动添加 CA 证书是在 <code>实用工具 =&gt; 钥匙串访问.app</code> 中操作。而在 app 中，分为<strong>默认钥匙串 =&gt; 登录</strong>、<strong>默认钥匙串 =&gt; 本地项目</strong>、<strong>系统钥匙串 =&gt; 系统</strong>、<strong>系统钥匙串 =&gt; 系统根证书</strong>。</p><p><img src="/images/2024/mac-add-ca/1.png" alt="keys.jpg"></p><p>自签的 CA 证书，有且只能在 <strong>默认钥匙串 =&gt; 登录</strong> 或<strong>系统钥匙串 =&gt; 系统</strong> 两个分组上做 <strong>文件菜单 =&gt; 导入项目</strong> 进行导入。导入成功后在证书页签下查看新增的证书，并右键选择 <strong>显示简介</strong> 后信任处选择 <strong>始终信任</strong>。</p><p><img src="/images/2024/mac-add-ca/2.png" alt="final.jpg"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> tools </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> tools </tag>
+            
+            <tag> mac </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JDK 导入 (CA) SSL 认证-纯净版</title>
       <link href="/2024/11/15/jdk-dao-ru-ca-ssl-ren-zheng-chun-jing-ban/"/>
       <url>/2024/11/15/jdk-dao-ru-ca-ssl-ren-zheng-chun-jing-ban/</url>
