@@ -3,7 +3,7 @@ title: Mac 如何添加 CA 证书
 date: 2024-11-15 19:27:29
 tags:
   - tools
-  - mac
+  - 杂项
 categories:
   - tools
 ---
