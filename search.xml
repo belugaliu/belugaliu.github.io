@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>linux 在 python2.x 基础上安装 python3.x</title>
+      <link href="/2024/11/23/linux-zai-python2-x-ji-chu-shang-an-zhuang-python3-x/"/>
+      <url>/2024/11/23/linux-zai-python2-x-ji-chu-shang-an-zhuang-python3-x/</url>
+      
+        <content type="html"><![CDATA[<p>这种文其实可以不写，浏览器中一大把，但也确实很多都不太对。这里说的安装 python3.x 使用 pyenv 进行管理，这样可以很好的管理所需的 python 3.x 各种版本。</p><p>我经历了比较多的问题，我会每步都记录，如果你这种问题就跳过。</p><h3 id="yum-修改阿里仓库源"><a href="#yum-修改阿里仓库源" class="headerlink" title="yum 修改阿里仓库源"></a>yum 修改阿里仓库源</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 备份当前的 yum 配置</span><span class="token function">sudo</span> <span class="token function">cp</span> <span class="token parameter variable">-ar</span> /etc/yum.repos.d /etc/yum.repos.d.bak<span class="token comment"># 删除原有的 repos 文件</span><span class="token function">sudo</span> <span class="token function">rm</span> <span class="token parameter variable">-f</span> /etc/yum.repos.d/*.repo<span class="token comment"># 下载阿里云的 CentOS YUM 源配置</span><span class="token comment"># 根据你的 CentOS 版本选择下面的命令执行</span><span class="token comment"># CentOS 7</span><span class="token function">sudo</span> <span class="token function">wget</span> <span class="token parameter variable">-O</span> /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo<span class="token comment"># CentOS 8</span><span class="token function">sudo</span> <span class="token function">wget</span> <span class="token parameter variable">-O</span> /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-8.repo<span class="token comment"># 清除缓存并生成新的缓存</span><span class="token function">sudo</span> yum clean all<span class="token function">sudo</span> yum makecache<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="安装-pyenv"><a href="#安装-pyenv" class="headerlink" title="安装 pyenv"></a>安装 pyenv</h3><p>pyenv 需要基于 github 上的仓库，所以前期需要安装 git 并设置 token 访问。安装 git 直接 yum 安装就行。这里会单独说明设置 token 访问。</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> credential.helper store<span class="token function">git</span> clone https://<span class="token variable">${token}</span>@<span class="token variable">${repo_url}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>就是保存 token 验证信息后，再安装 pyenv。通过命令 <code>curl https://pyenv.run | bash</code>。并在 <code>~/.bashrc</code> 增加配置</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">PYENV_ROOT</span><span class="token operator">=</span><span class="token string">"<span class="token environment constant">$HOME</span>/.pyenv"</span><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token string">"<span class="token variable">$PYENV_ROOT</span>/bin:<span class="token environment constant">$PATH</span>"</span><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token string">"<span class="token variable">$PYENV_ROOT</span>/shims:<span class="token environment constant">$PATH</span>"</span><span class="token builtin class-name">eval</span> <span class="token string">"<span class="token variable"><span class="token variable">$(</span>pyenv init -<span class="token variable">)</span></span>"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h3 id="安装-python3-x"><a href="#安装-python3-x" class="headerlink" title="安装 python3.x"></a>安装 python3.x</h3><p>使用命令 <code>pyenv install 3.11.10</code> 结果卡住在包下载上，只能手动下载 python 安装包，放到 <code>~/.pip/cache</code> 之后再执行 <code>pyenv install 3.11.10</code> 命令。</p><p>安装后会出现 <code>ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib</code> 的问题，这里耗费的时间最长，百度的都不对。<strong>最终还是得看官网说明的解决方案。</strong></p><h4 id="openssl-安装"><a href="#openssl-安装" class="headerlink" title="openssl 安装"></a>openssl 安装</h4><p>确定在 1.0.2 版本以上，我这里选的是 1.1.1 版本。先下载 openssl 的源码 <a href="https://openssl-library.org/source/old/1.1.1/index.html">1.1.1 | Library</a>，完成手动安装</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">./config <span class="token parameter variable">--prefix</span><span class="token operator">=</span>/usr/local/openssl_1_1 no-zlib<span class="token function">make</span> <span class="token operator">&amp;</span> <span class="token function">make</span> <span class="token function">install</span><span class="token function">ln</span> <span class="token parameter variable">-s</span> /usr/local/openssl_1_1/include/openssl /usr/include/openssl<span class="token function">ln</span> <span class="token parameter variable">-s</span> /usr/local/openssl_1_1/lib/libssl.so.1.1 /usr/local/lib64/libssl.so<span class="token function">ln</span> <span class="token parameter variable">-s</span> /usr/local/openssl_1_1/bin/openssl /usr/bin/openssl<span class="token builtin class-name">echo</span> <span class="token string">"/usr/local/openssl_1_1/lib"</span> <span class="token operator">&gt;&gt;</span> /etc/ld.so.confldconfig <span class="token parameter variable">-v</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>使用 <code>openssl version -d</code> 命令确定安装路径，使用一下命令安装 安装 python3.x，命令是结合 linux 版本和要安装后的 python 版本以及尝试后的结果。</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">LDFLAGS</span><span class="token operator">=</span><span class="token string">"-L/usr/lib64/openssl"</span> <span class="token punctuation">\</span><span class="token assign-left variable">CPPFLAGS</span><span class="token operator">=</span><span class="token string">"-I/usr/include/openssl"</span> <span class="token punctuation">\</span><span class="token assign-left variable">CONFIGURE_OPTS</span><span class="token operator">=</span><span class="token string">"--with-openssl=&lt;openssl install prefix&gt; --with-openssl-rpath=auto"</span> <span class="token punctuation">\</span>pyenv <span class="token function">install</span> <span class="token parameter variable">-v</span> <span class="token number">3.11</span>.10<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h3 id="参考附件"><a href="#参考附件" class="headerlink" title="参考附件"></a>参考附件</h3><ul><li><p><a href="https://github.com/pyenv/pyenv/wiki/Common-build-problems#error-the-python-ssl-extension-was-not-compiled-missing-the-openssl-lib">error-the-python-ssl-extension-was-not-compiled-missing-the-openssl-lib</a></p></li><li><p><a href="https://blog.csdn.net/2301_76933862/article/details/143360338">【linux】centos编译安装openssl1.1.1_centos安装openssl1.1.1-CSDN博客</a></p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Apple M1 编译 electron sqlite3</title>
       <link href="/2024/11/15/apple-m1-bian-yi-electron-sqlite3/"/>
       <url>/2024/11/15/apple-m1-bian-yi-electron-sqlite3/</url>
@@ -103,9 +130,9 @@
             
             <tag> code </tag>
             
-            <tag> tampermonkey </tag>
-            
             <tag> python </tag>
+            
+            <tag> tampermonkey </tag>
             
         </tags>
       

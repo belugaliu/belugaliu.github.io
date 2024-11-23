@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="json 工具我应该怎么选？, beluga">
-    <meta name="description" content="编程多年，其实适合项目/自己/团队才是合适的。JSON 在 B/S 应用下，作为轻量级的数据交换方式。也应运而生不少序列化反序列化的 JSON 工具包。比如，json-lib、fastjson、gson、jackson 等。我用过的，主要是">
+    <meta name="keywords" content="linux 在 python2.x 基础上安装 python3.x, beluga">
+    <meta name="description" content="这种文其实可以不写，浏览器中一大把，但也确实很多都不太对。这里说的安装 python3.x 使用 pyenv 进行管理，这样可以很好的管理所需的 python 3.x 各种版本。
+我经历了比较多的问题，我会每步都记录，如果你这种问题就跳过。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>json 工具我应该怎么选？ | beluga</title>
+    <title>linux 在 python2.x 基础上安装 python3.x | beluga</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -335,12 +336,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">json 工具我应该怎么选？</h1>
+                    <h1 class="description center-align post-title">linux 在 python2.x 基础上安装 python3.x</h1>
                 </div>
             </div>
         </div>
@@ -364,12 +365,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/tools/">
-                                <span class="chip bg-color">tools</span>
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
                             </a>
                         
-                            <a href="/tags/%E9%80%89%E5%9E%8B/">
-                                <span class="chip bg-color">选型</span>
+                            <a href="/tags/linux/">
+                                <span class="chip bg-color">linux</span>
                             </a>
                         
                     </div>
@@ -380,8 +381,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%80%89%E5%9E%8B/" class="post-category">
-                                选型
+                            <a href="/categories/python/" class="post-category">
+                                python
                             </a>
                         
                     </div>
@@ -393,7 +394,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-05-18
+                    2024-11-23
                 </div>
                 
 
@@ -402,7 +403,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    548
+                    631
                 </div>
                 
 
@@ -432,12 +433,56 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>编程多年，其实适合项目/自己/团队才是合适的。JSON 在 B/S 应用下，作为轻量级的数据交换方式。也应运而生不少序列化反序列化的 JSON 工具包。<br>比如，json-lib、fastjson、gson、jackson 等。我用过的，主要是这几个就说说我的选择场景及依据。</p>
-<h3 id="json-lib"><a href="#json-lib" class="headerlink" title="json-lib"></a>json-lib</h3><p>这是我<strong>被迫</strong>使用的 JSON 工具包。不是主动选择，也是因为确实觉得很坑。<strong>首先</strong>，序列化和反序列化耗时很慢。<strong>其次</strong>，<code>JSONObject.getXXX(key)</code> JSONObject<br>的 get 系方法都必须要求 key 必须在 JSON 串中且非空。也就是被使用的 key 都必须是非空值，所以就逼迫设置默认值。但这样可能会导致业务被”逼不得已”的默认值覆盖。<strong>第三</strong>，<code>JSONObject.put(key,value)</code> 方法会针对 value 类型为 String 且符合 JSON 格式时，会将 value 反序列化。这个特性看似很好，其实在特定场景下，给人误导，<br>以为 value 是 JSONObject 结果发现是 String。Oh my god ！！总结，坑比较多，不建议使用。</p>
-<h3 id="fastjson"><a href="#fastjson" class="headerlink" title="fastjson"></a>fastjson</h3><p>阿里巴巴出品，使用是很简单，基于类属性 get/set 来序列化和非序列化。包括也支持很多选项 <code>FastJsonConfig</code> 、 <code>SerializerFeature</code>。对研发来说，序列化反序列化使用<br>起来也很简单，性能也偏好。以为应该是很受欢迎，但 github 上 issue 很多。传说中源码写的不好，也没什么注释。所以，不是最受欢迎，在中国很有地位。</p>
-<h3 id="jackson"><a href="#jackson" class="headerlink" title="jackson"></a>jackson</h3><p>被 spring-web 用作默认的 <code>application/json</code> 序列化和反序列化 JSON 选型。依赖的 jar 包少，提供扩展选项/高级功能很多。对我而言，相比较 fastjson 而言，使用<br>不方便。对于 String 转 Date 时，必须指定 <code>@JsonProperty(format='xxxx')</code> 格式化字段。</p>
-<h3 id="gson"><a href="#gson" class="headerlink" title="gson"></a>gson</h3><p>google 推出 JSON 工具包，符合 JSON 格式定义，是依据属性进行序列化和反序列化，包含 public、private、protected 修饰字段。转 List、Set 集合类，相比 fastjson 支持<br>的很好。但是性能相比而言会弱一些。</p>
-<h3 id="如果需要功能完善，易上手建议-fastjson-gson。jackson-就结合-spring-web-使用。"><a href="#如果需要功能完善，易上手建议-fastjson-gson。jackson-就结合-spring-web-使用。" class="headerlink" title="如果需要功能完善，易上手建议 fastjson/gson。jackson 就结合 spring-web 使用。"></a><strong>如果需要功能完善，易上手建议 fastjson/gson。jackson 就结合 spring-web 使用。</strong></h3>
+                <p>这种文其实可以不写，浏览器中一大把，但也确实很多都不太对。这里说的安装 python3.x 使用 pyenv 进行管理，这样可以很好的管理所需的 python 3.x 各种版本。</p>
+<p>我经历了比较多的问题，我会每步都记录，如果你这种问题就跳过。</p>
+<h3 id="yum-修改阿里仓库源"><a href="#yum-修改阿里仓库源" class="headerlink" title="yum 修改阿里仓库源"></a>yum 修改阿里仓库源</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 备份当前的 yum 配置</span>
+<span class="token function">sudo</span> <span class="token function">cp</span> <span class="token parameter variable">-ar</span> /etc/yum.repos.d /etc/yum.repos.d.bak
+<span class="token comment"># 删除原有的 repos 文件</span>
+<span class="token function">sudo</span> <span class="token function">rm</span> <span class="token parameter variable">-f</span> /etc/yum.repos.d/*.repo
+<span class="token comment"># 下载阿里云的 CentOS YUM 源配置</span>
+<span class="token comment"># 根据你的 CentOS 版本选择下面的命令执行</span>
+<span class="token comment"># CentOS 7</span>
+<span class="token function">sudo</span> <span class="token function">wget</span> <span class="token parameter variable">-O</span> /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+<span class="token comment"># CentOS 8</span>
+<span class="token function">sudo</span> <span class="token function">wget</span> <span class="token parameter variable">-O</span> /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-8.repo
+<span class="token comment"># 清除缓存并生成新的缓存</span>
+<span class="token function">sudo</span> yum clean all
+<span class="token function">sudo</span> yum makecache<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="安装-pyenv"><a href="#安装-pyenv" class="headerlink" title="安装 pyenv"></a>安装 pyenv</h3><p>pyenv 需要基于 github 上的仓库，所以前期需要安装 git 并设置 token 访问。安装 git 直接 yum 安装就行。这里会单独说明设置 token 访问。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> credential.helper store
+<span class="token function">git</span> clone https://<span class="token variable">${token}</span>@<span class="token variable">${repo_url}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>就是保存 token 验证信息后，再安装 pyenv。通过命令 <code>curl https://pyenv.run | bash</code>。并在 <code>~/.bashrc</code> 增加配置</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">PYENV_ROOT</span><span class="token operator">=</span><span class="token string">"<span class="token environment constant">$HOME</span>/.pyenv"</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token string">"<span class="token variable">$PYENV_ROOT</span>/bin:<span class="token environment constant">$PATH</span>"</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token string">"<span class="token variable">$PYENV_ROOT</span>/shims:<span class="token environment constant">$PATH</span>"</span>
+<span class="token builtin class-name">eval</span> <span class="token string">"<span class="token variable"><span class="token variable">$(</span>pyenv init -<span class="token variable">)</span></span>"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="安装-python3-x"><a href="#安装-python3-x" class="headerlink" title="安装 python3.x"></a>安装 python3.x</h3><p>使用命令 <code>pyenv install 3.11.10</code> 结果卡住在包下载上，只能手动下载 python 安装包，放到 <code>~/.pip/cache</code> 之后再执行 <code>pyenv install 3.11.10</code> 命令。</p>
+<p>安装后会出现 <code>ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib</code> 的问题，这里耗费的时间最长，百度的都不对。<strong>最终还是得看官网说明的解决方案。</strong></p>
+<h4 id="openssl-安装"><a href="#openssl-安装" class="headerlink" title="openssl 安装"></a>openssl 安装</h4><p>确定在 1.0.2 版本以上，我这里选的是 1.1.1 版本。先下载 openssl 的源码 <a target="_blank" rel="noopener" href="https://openssl-library.org/source/old/1.1.1/index.html">1.1.1 | Library</a>，完成手动安装</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">./config <span class="token parameter variable">--prefix</span><span class="token operator">=</span>/usr/local/openssl_1_1 no-zlib
+<span class="token function">make</span> <span class="token operator">&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
+<span class="token function">ln</span> <span class="token parameter variable">-s</span> /usr/local/openssl_1_1/include/openssl /usr/include/openssl
+<span class="token function">ln</span> <span class="token parameter variable">-s</span> /usr/local/openssl_1_1/lib/libssl.so.1.1 /usr/local/lib64/libssl.so
+<span class="token function">ln</span> <span class="token parameter variable">-s</span> /usr/local/openssl_1_1/bin/openssl /usr/bin/openssl
+<span class="token builtin class-name">echo</span> <span class="token string">"/usr/local/openssl_1_1/lib"</span> <span class="token operator">&gt;&gt;</span> /etc/ld.so.conf
+ldconfig <span class="token parameter variable">-v</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>使用 <code>openssl version -d</code> 命令确定安装路径，使用一下命令安装 安装 python3.x，命令是结合 linux 版本和要安装后的 python 版本以及尝试后的结果。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">LDFLAGS</span><span class="token operator">=</span><span class="token string">"-L/usr/lib64/openssl"</span> <span class="token punctuation">\</span>
+<span class="token assign-left variable">CPPFLAGS</span><span class="token operator">=</span><span class="token string">"-I/usr/include/openssl"</span> <span class="token punctuation">\</span>
+<span class="token assign-left variable">CONFIGURE_OPTS</span><span class="token operator">=</span><span class="token string">"--with-openssl=&lt;openssl install prefix&gt; --with-openssl-rpath=auto"</span> <span class="token punctuation">\</span>
+pyenv <span class="token function">install</span> <span class="token parameter variable">-v</span> <span class="token number">3.11</span>.10<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="参考附件"><a href="#参考附件" class="headerlink" title="参考附件"></a>参考附件</h3><ul>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/pyenv/pyenv/wiki/Common-build-problems#error-the-python-ssl-extension-was-not-compiled-missing-the-openssl-lib">error-the-python-ssl-extension-was-not-compiled-missing-the-openssl-lib</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/2301_76933862/article/details/143360338">【linux】centos编译安装openssl1.1.1_centos安装openssl1.1.1-CSDN博客</a></p>
+</li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -463,7 +508,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://belugaliu.github.io/2023/05/18/json-gong-ju-wo-ying-gai-zen-me-xuan/">https://belugaliu.github.io/2023/05/18/json-gong-ju-wo-ying-gai-zen-me-xuan/</a>
+                    <a href="https://belugaliu.github.io/2024/11/23/linux-zai-python2-x-ji-chu-shang-an-zhuang-python3-x/">https://belugaliu.github.io/2024/11/23/linux-zai-python2-x-ji-chu-shang-an-zhuang-python3-x/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -501,12 +546,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/tools/">
-                                    <span class="chip bg-color">tools</span>
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
                                 </a>
                             
-                                <a href="/tags/%E9%80%89%E5%9E%8B/">
-                                    <span class="chip bg-color">选型</span>
+                                <a href="/tags/linux/">
+                                    <span class="chip bg-color">linux</span>
                                 </a>
                             
                         </div>
@@ -552,17 +597,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2024/01/31/redis-fen-bu-shi-suo-ni-xu-yue-liao-ma/">
+                <a href="/2024/11/23/linux-zai-python2-x-ji-chu-shang-an-zhuang-python3-x/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Redis 分布式锁你续约了吗">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="linux 在 python2.x 基础上安装 python3.x">
                         
-                        <span class="card-title">Redis 分布式锁你续约了吗</span>
+                        <span class="card-title">linux 在 python2.x 基础上安装 python3.x</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -572,34 +618,31 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-01-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-11-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/code/" class="post-category">
-                                    code
+                            <a href="/categories/python/" class="post-category">
+                                    python
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">
-                        <span class="chip bg-color">分布式锁</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/redis/">
-                        <span class="chip bg-color">redis</span>
-                    </a>
-                    
-                    <a href="/tags/code/">
-                        <span class="chip bg-color">code</span>
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
                     </a>
                     
                 </div>
@@ -613,13 +656,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/04/10/spring-boot-security-oauth2-ying-yong-shi-xian/">
+                <a href="/2024/11/15/apple-m1-bian-yi-electron-sqlite3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="spring-boot-security OAuth2应用实现">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Apple M1 编译 electron sqlite3">
                         
-                        <span class="card-title">spring-boot-security OAuth2应用实现</span>
+                        <span class="card-title">Apple M1 编译 electron sqlite3</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -630,7 +673,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-11-15
                             </span>
                         <span class="publish-author">
                             
@@ -647,24 +690,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/spring-security/">
-                        <span class="chip bg-color">spring-security</span>
+                    <a href="/tags/electron/">
+                        <span class="chip bg-color">electron</span>
                     </a>
                     
-                    <a href="/tags/cas/">
-                        <span class="chip bg-color">cas</span>
-                    </a>
-                    
-                    <a href="/tags/oauth2/">
-                        <span class="chip bg-color">oauth2</span>
-                    </a>
-                    
-                    <a href="/tags/pre-security/">
-                        <span class="chip bg-color">pre-security</span>
-                    </a>
-                    
-                    <a href="/tags/code/">
-                        <span class="chip bg-color">code</span>
+                    <a href="/tags/sqlite3/">
+                        <span class="chip bg-color">sqlite3</span>
                     </a>
                     
                 </div>
