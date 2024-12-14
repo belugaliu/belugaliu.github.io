@@ -6,7 +6,7 @@
   <link href="https://belugaliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://belugaliu.github.io/"/>
-  <updated>2024-12-10T15:47:10.932Z</updated>
+  <updated>2024-12-14T15:23:34.804Z</updated>
   <id>https://belugaliu.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Aspose 如何去掉官方水印（crack）</title>
+    <link href="https://belugaliu.github.io/2024/12/14/aspose-ru-he-qu-diao-guan-fang-shui-yin-crack/"/>
+    <id>https://belugaliu.github.io/2024/12/14/aspose-ru-he-qu-diao-guan-fang-shui-yin-crack/</id>
+    <published>2024-12-14T23:19:55.000Z</published>
+    <updated>2024-12-14T15:23:34.804Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;如果你资金不紧张的话，还是支持正版比较好。因为支持原创才是王道，做原创且用且珍惜。仅针对资金不足也不用于商业用途的情况下，可以看向这里。&lt;/p&gt;
+&lt;h3 id=&quot;基本思路&quot;&gt;&lt;a href=&quot;#基本思路&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="https://belugaliu.github.io/categories/code/"/>
+    
+    
+    <category term="aspose" scheme="https://belugaliu.github.io/tags/aspose/"/>
+    
+    <category term="工具" scheme="https://belugaliu.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Aspose 操作集合</title>
     <link href="https://belugaliu.github.io/2024/12/09/aspose-cao-zuo-ji-he/"/>
     <id>https://belugaliu.github.io/2024/12/09/aspose-cao-zuo-ji-he/</id>
     <published>2024-12-09T00:36:46.000Z</published>
-    <updated>2024-12-10T15:47:10.932Z</updated>
+    <updated>2024-12-14T15:23:34.804Z</updated>
     
     
       
@@ -49,7 +77,7 @@
     <link href="https://belugaliu.github.io/2024/11/23/linux-zai-python2-x-ji-chu-shang-an-zhuang-python3-x/"/>
     <id>https://belugaliu.github.io/2024/11/23/linux-zai-python2-x-ji-chu-shang-an-zhuang-python3-x/</id>
     <published>2024-11-23T23:19:39.000Z</published>
-    <updated>2024-12-10T15:47:10.964Z</updated>
+    <updated>2024-12-14T15:23:34.836Z</updated>
     
     
       
@@ -78,7 +106,7 @@
     <link href="https://belugaliu.github.io/2024/11/15/apple-m1-bian-yi-electron-sqlite3/"/>
     <id>https://belugaliu.github.io/2024/11/15/apple-m1-bian-yi-electron-sqlite3/</id>
     <published>2024-11-15T20:00:03.000Z</published>
-    <updated>2024-12-10T15:47:10.932Z</updated>
+    <updated>2024-12-14T15:23:34.804Z</updated>
     
     
       
@@ -106,7 +134,7 @@
     <link href="https://belugaliu.github.io/2024/11/15/mac-ru-he-tian-jia-ca-zheng-shu/"/>
     <id>https://belugaliu.github.io/2024/11/15/mac-ru-he-tian-jia-ca-zheng-shu/</id>
     <published>2024-11-15T19:27:29.000Z</published>
-    <updated>2024-12-10T15:47:10.932Z</updated>
+    <updated>2024-12-14T15:23:34.804Z</updated>
     
     
       
@@ -133,7 +161,7 @@
     <link href="https://belugaliu.github.io/2024/11/15/jdk-dao-ru-ca-ssl-ren-zheng-chun-jing-ban/"/>
     <id>https://belugaliu.github.io/2024/11/15/jdk-dao-ru-ca-ssl-ren-zheng-chun-jing-ban/</id>
     <published>2024-11-15T11:32:29.000Z</published>
-    <updated>2024-12-10T15:47:10.932Z</updated>
+    <updated>2024-12-14T15:23:34.804Z</updated>
     
     
       
@@ -160,7 +188,7 @@
     <link href="https://belugaliu.github.io/2024/10/25/shi-yong-cuan-gai-hou-he-python-qiu-pa-ti-zi-wai-wen-dang-he-shi-pin/"/>
     <id>https://belugaliu.github.io/2024/10/25/shi-yong-cuan-gai-hou-he-python-qiu-pa-ti-zi-wai-wen-dang-he-shi-pin/</id>
     <published>2024-10-25T18:11:02.000Z</published>
-    <updated>2024-12-10T15:47:10.964Z</updated>
+    <updated>2024-12-14T15:23:34.836Z</updated>
     
     
       
@@ -193,7 +221,7 @@
     <link href="https://belugaliu.github.io/2024/10/10/pdf-he-bing-da-wen-jian-de-battle/"/>
     <id>https://belugaliu.github.io/2024/10/10/pdf-he-bing-da-wen-jian-de-battle/</id>
     <published>2024-10-10T14:05:28.000Z</published>
-    <updated>2024-12-10T15:47:10.932Z</updated>
+    <updated>2024-12-14T15:23:34.804Z</updated>
     
     
       
@@ -218,7 +246,7 @@
     <link href="https://belugaliu.github.io/2024/09/28/hao-yong-de-nodejs-duo-ban-ben-guan-li-gong-ju-nvm/"/>
     <id>https://belugaliu.github.io/2024/09/28/hao-yong-de-nodejs-duo-ban-ben-guan-li-gong-ju-nvm/</id>
     <published>2024-09-28T18:08:23.000Z</published>
-    <updated>2024-12-10T15:47:10.964Z</updated>
+    <updated>2024-12-14T15:23:34.836Z</updated>
     
     
       
@@ -243,7 +271,7 @@
     <link href="https://belugaliu.github.io/2024/07/22/xu-ni-lie-biao-ji-ben-shi-xian/"/>
     <id>https://belugaliu.github.io/2024/07/22/xu-ni-lie-biao-ji-ben-shi-xian/</id>
     <published>2024-07-22T16:46:59.000Z</published>
-    <updated>2024-12-10T15:47:10.964Z</updated>
+    <updated>2024-12-14T15:23:34.836Z</updated>
     
     
       
@@ -268,7 +296,7 @@
     <link href="https://belugaliu.github.io/2024/05/22/qian-duan-yang-shi-bu-ju-zi-gua-ying-xiao-jie/"/>
     <id>https://belugaliu.github.io/2024/05/22/qian-duan-yang-shi-bu-ju-zi-gua-ying-xiao-jie/</id>
     <published>2024-05-22T17:15:01.000Z</published>
-    <updated>2024-12-10T15:47:10.964Z</updated>
+    <updated>2024-12-14T15:23:34.836Z</updated>
     
     
       
@@ -295,7 +323,7 @@
     <link href="https://belugaliu.github.io/2024/05/22/pdf-wen-jian-web-duan-jia-su-zhuang-zai/"/>
     <id>https://belugaliu.github.io/2024/05/22/pdf-wen-jian-web-duan-jia-su-zhuang-zai/</id>
     <published>2024-05-22T09:50:59.000Z</published>
-    <updated>2024-12-10T15:47:10.932Z</updated>
+    <updated>2024-12-14T15:23:34.804Z</updated>
     
     
       
@@ -325,7 +353,7 @@
     <link href="https://belugaliu.github.io/2024/04/06/vue-5w-ge-jie-dian-shu-xing-neng-you-hua/"/>
     <id>https://belugaliu.github.io/2024/04/06/vue-5w-ge-jie-dian-shu-xing-neng-you-hua/</id>
     <published>2024-04-06T12:42:11.000Z</published>
-    <updated>2024-12-10T15:47:10.964Z</updated>
+    <updated>2024-12-14T15:23:34.836Z</updated>
     
     
       
@@ -357,7 +385,7 @@
     <link href="https://belugaliu.github.io/2024/04/01/suan-fa-xiao-bai-b-shu-b-shu-he-b-shu/"/>
     <id>https://belugaliu.github.io/2024/04/01/suan-fa-xiao-bai-b-shu-b-shu-he-b-shu/</id>
     <published>2024-04-01T00:48:12.000Z</published>
-    <updated>2024-12-10T15:47:10.964Z</updated>
+    <updated>2024-12-14T15:23:34.836Z</updated>
     
     
       
@@ -386,7 +414,7 @@
     <link href="https://belugaliu.github.io/2024/03/22/jvm-de-la-ji-hui-shou-qi-men/"/>
     <id>https://belugaliu.github.io/2024/03/22/jvm-de-la-ji-hui-shou-qi-men/</id>
     <published>2024-03-22T13:28:28.000Z</published>
-    <updated>2024-12-10T15:47:10.932Z</updated>
+    <updated>2024-12-14T15:23:34.804Z</updated>
     
     
       
@@ -553,33 +581,6 @@
     <category term="redis" scheme="https://belugaliu.github.io/tags/redis/"/>
     
     <category term="code" scheme="https://belugaliu.github.io/tags/code/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>json 工具我应该怎么选？</title>
-    <link href="https://belugaliu.github.io/2023/05/18/json-gong-ju-wo-ying-gai-zen-me-xuan/"/>
-    <id>https://belugaliu.github.io/2023/05/18/json-gong-ju-wo-ying-gai-zen-me-xuan/</id>
-    <published>2023-05-18T15:25:00.000Z</published>
-    <updated>2024-02-18T04:45:25.041Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;编程多年，其实适合项目/自己/团队才是合适的。JSON 在 B/S 应用下，作为轻量级的数据交换方式。也应运而生不少序列化反序列化的 JSON 工具包。&lt;br&gt;比如，json-lib、fastjson、gson、jackson</summary>
-        
-      
-    
-    
-    
-    <category term="选型" scheme="https://belugaliu.github.io/categories/%E9%80%89%E5%9E%8B/"/>
-    
-    
-    <category term="tools" scheme="https://belugaliu.github.io/tags/tools/"/>
-    
-    <category term="选型" scheme="https://belugaliu.github.io/tags/%E9%80%89%E5%9E%8B/"/>
     
   </entry>
   
