@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>WPS NPAPI 搬运工</title>
+      <link href="/2025/02/10/wps-npapi-ban-yun-gong/"/>
+      <url>/2025/02/10/wps-npapi-ban-yun-gong/</url>
+      
+        <content type="html"><![CDATA[<h3 id="关于-NPAPI-Chrome-内核的态度"><a href="#关于-NPAPI-Chrome-内核的态度" class="headerlink" title="关于 NPAPI Chrome 内核的态度"></a>关于 NPAPI Chrome 内核的态度</h3><p>Chrome 内核早在 V42 版本（2015年）开始默认关闭 NPAPI（Netscape Plugin API） 支持设置，在 V53 版本淘汰对 NPAPI 的支持。原因是，NPAPI 插件中的代码拥有当前用户的所有权限，对于恶意的输入不受到 Chrome 的任何保护。如果插件包含漏洞，攻击者可能会利用<strong>漏洞</strong>在用户的计算机上安装恶意软件。而后 Chrome 建议使用的 PPAPI（Pepper Plugin API） 插件，是由 Chrome 自身研发避免了 NPAPI 的缺点，但也在 2022 年 Chrome 内核 V107 版本放弃支持。</p><h3 id="国产浏览器对-NPAPI-的态度"><a href="#国产浏览器对-NPAPI-的态度" class="headerlink" title="国产浏览器对 NPAPI 的态度"></a>国产浏览器对 NPAPI 的态度</h3><p>许多国产浏览器都是基于 Chrome 内核二次研发，但 TA 们对 NPAPI 却是支持的。在国产机器上安装 WPS 专业版本，会自动给浏览器安装 <code>Kingsoft WPS Plugin</code> 插件。以 UOS 浏览器为例，UOS 是基于 <code>Chrome/54.0.3239.132</code> 版本研发，通过 <code>uos://plugins</code> 可见。</p><h3 id="WPS-对-NPAPI-的态度"><a href="#WPS-对-NPAPI-的态度" class="headerlink" title="WPS 对 NPAPI 的态度"></a>WPS 对 NPAPI 的态度</h3><p>WPS 开发者平台是建议使用 WPS 加载项进行二次开发。但对 NPAPI 支持的浏览器也提供了集成的整套 demo 。具体在  <a href="https://open.wps.cn/previous/docs/client/wpsLoad">前-WPS开放平台</a> 中 WPS 加载项 =&gt; WPS 集成模式 =&gt; 浏览器应用集成嵌入 WPS 指南 <a href="https://gitee.com/zouyf/wps/tree/master/np-example/browser-integration-wps">wps: wps二次开发系统集成相关 - Gitee.com</a> ，基本上场景都包括了。</p><p><img src="/images/2025/WPS_NPAPI_1.jpg"></p><h3 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h3><h5 id="问题1：只能打开空的-WPS-插件，但是看不到文档内容。"><a href="#问题1：只能打开空的-WPS-插件，但是看不到文档内容。" class="headerlink" title="问题1：只能打开空的 WPS 插件，但是看不到文档内容。"></a>问题1：只能打开空的 WPS 插件，但是看不到文档内容。</h5><p>一般来说，是你的问题不会是 WPS 插件问题。在调用 <code> this.pluginObj.OpenDocumentFromServer()</code>  的返回值中包含错误信息说明。</p><pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>    <span class="token property">"result"</span> <span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>            <span class="token property">"errMsg"</span> <span class="token operator">:</span> <span class="token string">"错误信息"</span><span class="token punctuation">,</span>                 <span class="token property">"fileName"</span> <span class="token operator">:</span> <span class="token string">"打开文件名"</span><span class="token punctuation">,</span>            <span class="token property">"responseHead"</span> <span class="token operator">:</span> <span class="token punctuation">{</span>        <span class="token property">"key1"</span> <span class="token operator">:</span> <span class="token string">"value1"</span><span class="token punctuation">,</span>        <span class="token property">"key2"</span> <span class="token operator">:</span> <span class="token string">"value2"</span><span class="token punctuation">,</span>        <span class="token property">"key3"</span> <span class="token operator">:</span> <span class="token string">"value3"</span>        <span class="token punctuation">}</span>            <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h5 id="问题2：WPS-插件之上的-div-窗口会被挡住。"><a href="#问题2：WPS-插件之上的-div-窗口会被挡住。" class="headerlink" title="问题2：WPS 插件之上的 div 窗口会被挡住。"></a>问题2：WPS 插件之上的 div 窗口会被挡住。</h5><p>这种解决办法就是先将 Application 的 Visable 设置为 false，而后改为 true，并重新打开文档。</p><h3 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h3><ul><li><a href="https://techcommunity.microsoft.com/discussions/edgeinsiderdiscussions/good-news-google-is-finally-killing-off-chrome-apps-end-support-for-nacl-pnacl-a/1112057">谷歌最终将关闭 Chrome 应用程序，并终止对 NaCl、PNaCl 和 PPAPI API 的支持</a></li><li><a href="https://gitee.com/zouyf/wps/tree/master/np-example/browser-integration-wps">wps: wps二次开发系统集成相关 - Gitee.com</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> tools </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> WPS </tag>
+            
+            <tag> NPAPI </tag>
+            
+            <tag> 插件 </tag>
+            
+            <tag> 浏览器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Aspose 如何去掉官方水印（crack）</title>
       <link href="/2024/12/14/aspose-ru-he-qu-diao-guan-fang-shui-yin-crack/"/>
       <url>/2024/12/14/aspose-ru-he-qu-diao-guan-fang-shui-yin-crack/</url>
